@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    image: my-spring-boot-app:latest # Replace with your Spring Boot app image
+    container_name: spring-boot-app
+    build:
+      context: .
+      dockerfile: Dockerfile # Make sure you have a Dockerfile for your app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: passwordA
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+    depends_on:
+      - db
+    ports:
+      - "8081:8080" # Expose Spring Boot app on port 8080
+    networks:
+      - app-network
+
+  db:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: message_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: passwordA
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432" # Expose PostgreSQL on port 5432
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+
+networks:
+  app-network:

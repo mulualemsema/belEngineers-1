@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  profiles:
+    active: ${ENV:local}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+    username: postgres
+    password: passwordA
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.default_schema: public
+      hibernate:
+        format_sql: true
+        cache:
+          use_second_level_cache: false
+          use_query_cache: false
+        transaction:
+          coordinator_class=jdbc
+  #config:
+    #activate:
+      #on-profile: local
+logging:
+  level:
+    org.springframework: INFO
+
+
+
+
+
+

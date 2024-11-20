@@ -1,0 +1,42 @@
+plugins {
+	id 'groovy'
+	id 'org.springframework.boot' version '3.2.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'idea'
+	id 'org.liquibase.gradle' version '2.0.1'
+}
+
+group = 'com.belengineers-tx'
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation group: 'org.hibernate.orm', name: 'hibernate-core', version: '6.4.4.Final'
+	implementation group: 'io.hypersistence', name: 'hypersistence-utils-hibernate-63', version: '3.9.0'
+	implementation 'org.springframework.boot:spring-boot-starter-groovy-templates'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.apache.groovy:groovy'
+	implementation 'org.liquibase:liquibase-core'
+	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+	runtimeOnly 'org.postgresql:postgresql'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
