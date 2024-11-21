@@ -4,6 +4,7 @@ package com.belengineers_tx.belengineers_tx.api
 import com.belengineers_tx.belengineers_tx.entity.UserMessage
 import com.belengineers_tx.belengineers_tx.service.MessageService
 import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "http://localhost:3000")
 class MessageController {
 
     private final MessageService messageService

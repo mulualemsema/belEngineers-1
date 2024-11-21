@@ -8,6 +8,7 @@ import jakarta.transaction.Transactional
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
+import java.time.LocalDate
 import java.time.LocalDateTime
 
 @Service
@@ -22,8 +23,16 @@ class MessageService {
 
     @Transactional
     UserMessage saveMessage(UserMessage message) {
-        message.createTimestamp = LocalDateTime.now()
-        messageRepository.save(message)
+        // Ensure createTimestamp is set to the current time
+        message.setCreateTimestamp(LocalDateTime.now())
+
+        // Save the message entity to the database
+        UserMessage savedMessage = messageRepository.save(message)
+
+        // Optional: Flush to ensure the data is immediately persisted
+        messageRepository.flush()  // Ensures the transaction is written to the DB
+
+        return savedMessage  // Return the saved message (optional, but useful)
     }
 
     UserMessage getMessageById(Long id) {
@@ -32,7 +41,7 @@ class MessageService {
     }
 
     List<UserMessage> getAllMessages() {
-        messageRepository.findAll()
+        messageRepository.findAllMessages()
     }
 
     UserMessage updateMessage(Long id, UserMessage updatedMessage) {

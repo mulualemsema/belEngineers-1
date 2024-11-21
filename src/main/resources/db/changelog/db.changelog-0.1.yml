@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: changelog-0.1.0
-      author: AsratKSTMARRY
+      author: AsratKCSTMARRY
       changes:
         - sqlFile:
             dbms: 'postgresql'

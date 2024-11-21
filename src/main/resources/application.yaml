@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8083
   servlet:
     context-path: /
 
@@ -12,8 +12,9 @@ spring:
     password: passwordA
     driver-class-name: org.postgresql.Driver
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
     show-sql: true
     properties:
       hibernate.default_schema: public
@@ -21,15 +22,17 @@ spring:
         format_sql: true
         cache:
           use_second_level_cache: false
-          use_query_cache: false
+          #use_query_cache: false
         transaction:
           coordinator_class=jdbc
-  #config:
+        use_sql_comments: true
+      #config:
     #activate:
       #on-profile: local
 logging:
   level:
     org.springframework: INFO
+
 
 
 
