@@ -1,0 +1,137 @@
+/* General styling for the container */
+.about-us {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Section title */
+.about h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling for better readability */
+.about p {
+    text-align: justify;
+    margin: 15px 0;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Team section styles */
+.team {
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* Subtitle for team section */
+.team h3 {
+    font-size: 1.5rem;
+    color: #004080;
+    margin-bottom: 15px;
+}
+
+/* Center the team members */
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Individual member styles */
+.member {
+    text-align: center;
+    position: relative;
+    margin-top: 50px; /* For the avatar to overlap nicely */
+}
+
+/* Circular avatar styling */
+.member img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: -70px; /* Places the avatar in the middle of the section */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Member name */
+.member h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 90px; /* Accounts for the avatar's overlap */
+    margin-bottom: 5px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Member position/title */
+.member p {
+    font-size: 1rem;
+    color: #777;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container styles for responsiveness */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Responsive Design */
+
+/* Tablet Screens */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p {
+        font-size: 0.95rem;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .member img {
+        width: 120px;
+        height: 120px;
+        top: -60px;
+    }
+
+    .member h4 {
+        margin-top: 80px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    .about p {
+        font-size: 0.85rem;
+        padding: 0 10px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .member img {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+    }
+
+    .member h4 {
+        margin-top: 70px;
+    }
+
+    .team h3 {
+        font-size: 1.3rem;
+        font-family: 'Arial', sans-serif;
+    }
+}

@@ -9,18 +9,22 @@ services:
       SPRING_PROFILES_ACTIVE: prod
     volumes:
       - ./logs:/app/logs
-    restart: always # Restarts the container if stopped
+    restart: always
+    depends_on:
+      - db  # Ensure db is started before app
+
   db:
     image: postgres:15
     container_name: postgres-db
     ports:
-      - "5433:5432"
+      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: passwordA
       POSTGRES_DB: postgres
     volumes:
       - db_data:/var/lib/postgresql/data
-    restart: unless-stopped # Restarts unless explicitly stopped
+    restart: unless-stopped
+
 volumes:
   db_data:

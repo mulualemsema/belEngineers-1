@@ -1,0 +1,240 @@
+/* Top strip styles */
+.top-strip {
+    display: flex;
+    justify-content: flex-end; /* Aligns content to the right */
+    align-items: center;
+    padding: 5px 20px; /* Adds padding to the strip */
+    background-color: darkblue; /* Blue background for the strip */
+    color: white; /* White text for contrast */
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1001; /* Ensures it stays above the header */
+    border-bottom: 1px solid #d3d3d3; /* Light grey bottom border */
+}
+
+.phone-icon {
+    margin-right: 5px;
+    color: yellow; /* Yellow color for the phone icon */
+    font-size: 16px;
+}
+
+.phone-number {
+    font-weight: bold;
+    margin-right: 45px;
+}
+
+/* General styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 18px;
+}
+
+.header.scrolled {
+    background-color: #f8f8f8;
+}
+
+.logo-image {
+    width: 250px;
+    height: 50px;
+    padding: 15px;
+    color: blue;
+    font-size: 20px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* Blue color for specific links */
+.nav-links a[href="/"],
+.nav-links a[href="/aboutUs"],
+.nav-links a[href="/service"],
+.nav-links a[href="/certification"],
+.nav-links a[href="/contact"],
+.nav-links a[href="/safety"],
+.nav-links a[href="/admin"] {
+    color: blue; /* Highlighted links */
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #007bff; /* Add hover effect */
+}
+
+.nav-links a {
+    text-decoration:blue;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a.active {
+    color: red;
+    font-weight: bold;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links initially */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.4); /* 40% opacity white */
+        position: absolute;
+        top: 20px; /* Positioning below the header */
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex; /* Show navigation links when the menu is toggled */
+    }
+
+    .nav-links li {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: none;
+        background-color: transparent;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    .header.scrolled .menu-toggle {
+        color: white;
+    }
+
+    /* Adjust top strip for smaller screens */
+    .top-strip {
+        justify-content: center; /* Center align content on smaller screens */
+        font-size: 12px; /* Reduce font size */
+        padding: 5px 10px;
+    }
+
+    .phone-number {
+        margin-right: 0; /* Remove extra margin on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .top-strip {
+        flex-direction: column; /* Stack content vertically on very small screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .phone-icon {
+        margin: 0; /* Center icon and number */
+    }
+
+    .phone-number {
+        margin-top: 5px; /* Add slight spacing between icon and number */
+    }
+}
+
+/* Adjustments for mobile menu */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        color: blue;
+        background-color: transparent;
+    }
+
+    .nav {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    /* Add border-top only when menu is open */
+    .nav.open {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 5px;
+        width: 100px;
+    }
+
+    .nav-links {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the items */
+    margin-top: 5px;
+}
+
+.Bel-name {
+    font-size: 20px; /* Adjust the text size */
+    margin-left: -80px;
+    color: blue;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav.open {
+        display: block;
+    }
+}
+

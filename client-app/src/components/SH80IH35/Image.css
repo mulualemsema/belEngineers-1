@@ -1,0 +1,22 @@
+
+/* Apply zoom effect when image is clicked */
+.centered-image.zoomed {
+    transform: scale(1.5); /* Zoom in the image */
+}
+
+/* Optional: Add some responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .image-container {
+        padding: 0 10px; /* Less padding on smaller screens */
+    }
+
+    .centered-image.zoomed {
+        transform: scale(1.3); /* Less zoom for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-image.zoomed {
+        transform: scale(1.2); /* Even less zoom on very small screens */
+    }
+}

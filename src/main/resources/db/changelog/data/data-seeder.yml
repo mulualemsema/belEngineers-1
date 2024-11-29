@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: data-seeder-Demissie
+      author: adminData
+      changes:
+        - sqlFile:
+            dbms: 'postgresql'
+            encoding: UTF-8
+            path: dml-script-data.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: true

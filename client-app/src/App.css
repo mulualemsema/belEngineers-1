@@ -1,0 +1,28 @@
+.footer {
+  background-color: #f0f0f0; /* Lighter grey color */
+  color: #333; /* Darker text color for better contrast */
+  padding: 20px;
+  text-align: center; /* Centers the content */
+}
+
+.footer-content {
+  display: inline-block; /* Ensures content is centered */
+  max-width: 1000px; /* Set a maximum width to avoid stretching */
+  width: 100%;
+}
+
+.contact-info {
+  margin-bottom: 10px; /* Adds spacing between the contact info and date */
+}
+
+.footer-date {
+  margin-top: 10px; /* Adds space between the contact info and date */
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer strong {
+  font-weight: bold;
+}

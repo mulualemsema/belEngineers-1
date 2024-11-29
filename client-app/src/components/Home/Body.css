@@ -1,0 +1,462 @@
+/* Body.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.body-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ccc; /* Added grey line at the bottom */
+}
+
+.carousel {
+    position: relative;
+    width: 100%; /* Full width of the viewport */
+    height: 80vh; /* Default height for large screens */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.carousel-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    animation: zoomIn 14s infinite;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.section-title {
+    margin: 20px 0; /* Default margin for large screens */
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    padding-top: 20px; /* Add top padding to leave space at the top */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 images equally spaced in a row */
+    gap: 10px; /* Increased spacing between images */
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Increased margin */
+    width: 80vw; /* Increased width of the grid */
+}
+
+.grid-image {
+    width: 250%; /* Increased image size */
+    height: auto;
+    object-fit: cover; /* Ensures images fill their spaces without distortion */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow for emphasis */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.view-all-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Keyframe animation for zoom effect */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1); /* Slight zoom in */
+    }
+}
+
+/* Card container styles */
+.card-container {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between the cards */
+    padding: 0 140px; /* Adds space from the left and right of the viewport */
+    margin: 10px auto; /* Adds vertical spacing and centers the container */
+    max-width: 1200px; /* Optional: Limits the container width for better design */
+    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+}
+
+/* Individual card styles */
+.card {
+    flex: 1; /* Allows cards to be flexible */
+    max-width: 33%; /* Controls the maximum width of each card */
+    min-width: 280px; /* Prevents the card from shrinking too much */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 5px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Card title */
+.card-title {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Card description */
+.card-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Ensures the button stays at the bottom */
+}
+
+/* Card button */
+.card-button {
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 80px;
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+    }
+
+    .carousel {
+        height: 40vh; /* Slightly smaller height on small screens */
+    }
+}
+
+.title-overlay {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none;
+    font-size: smaller; /* Adjusts font size to be smaller */
+}
+
+.title {
+    font-size: 3rem; /* Default size for large screens */
+    font-weight: bold;
+    color: mediumaquamarine;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center; /* Default alignment */
+    margin: 20px 0; /* Default spacing */
+}
+
+@keyframes zoom-in-out {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.carousel {
+    position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .carousel {
+        height: 70vh; /* Reduce height for medium screens */
+    }
+
+    .carousel-image {
+        width: 95%; /* Slightly larger images on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel {
+        height: 60vh; /* Further reduction for smaller screens */
+    }
+
+    .carousel-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        height: 50vh; /* Half the viewport height for mobile devices */
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel {
+        height: 40vh; /* Smaller height for very small devices */
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 3.5rem; /* Slightly smaller for medium screens */
+    }
+
+    .title-overlay {
+        left: 100px; /* Adjust positioning */
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 3rem; /* Further reduce font size */
+    }
+
+    .title-overlay {
+        left: 80px; /* Center text better on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem; /* Smaller font size for tablets */
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .title-overlay {
+        left: 50px; /* Adjust to center better on narrow screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 2rem; /* Compact size for mobile devices */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .title-overlay {
+        left: 20px; /* Minimal horizontal offset for very small screens */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .section-title {
+        font-size: 22px; /* Slightly smaller for medium screens */
+        margin: 15px 0; /* Adjust vertical spacing */
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 20px; /* Smaller font for smaller screens */
+        margin: 10px 0; /* Reduce spacing */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 18px; /* Compact size for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 16px; /* Smallest size for mobile screens */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 3.5rem; /* Slightly smaller font size */
+        text-align: left; /* Adjust alignment for larger tablet screens */
+        margin: 15px 0; /* Adjust spacing */
+    }
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 3rem; /* Reduce font size for smaller tablets */
+        text-align: center; /* Center alignment for narrower devices */
+        margin: 10px 0; /* Less spacing for compact layouts */
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem; /* Further reduction for tablets */
+        margin: 10px 5px; /* Compact margin */
+        text-align: center; /* Ensure centered text for most tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 2rem; /* Smallest size for mobile devices */
+        text-align: center; /* Always centered on small screens */
+        margin: 8px 5px; /* Minimal spacing */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .section-title {
+        font-size: 22px;
+        margin: 15px 0;
+        padding-top: 40px; /* Reduce top padding for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 20px;
+        margin: 10px 0;
+        padding-top: 30px; /* Further reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 18px;
+        padding-top: 20px; /* Compact padding for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 16px;
+        padding-top: 15px; /* Minimal padding for mobile devices */
+    }
+}
+
+/* Parent container styling */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 200%;
+    height: 200%;
+}
+
+.grid-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-caption-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 0.8rem;
+    text-align: justify; /* Keep text justification for paragraphs */
+    padding: 16px; /* Adjust padding for spacious feel */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    line-height: 1.6; /* Increased line height for better readability */
+    letter-spacing: 1px; /* Small letter spacing for clarity */
+}
+
+.image-wrapper:hover .image-caption-hover {
+    opacity: 1;
+}
+
+.image-caption-below {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* For paragraphs */
+.image-caption-hover p {
+    margin-bottom: 12px; /* Add space between paragraphs */
+}
+
+/* For unordered lists */
+.image-caption-hover ul {
+    list-style-type: disc; /* Show bullet points */
+    padding-left: 20px; /* Indentation for the list */
+    margin-top: 12px; /* Add space before the list starts */
+}
+
+/* For list items */
+.image-caption-hover li {
+    margin-bottom: 6px; /* Add spacing between list items */
+}

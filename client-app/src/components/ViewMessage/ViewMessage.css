@@ -1,0 +1,135 @@
+.viewMessageContainer {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.messageTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: auto; /* Ensures table adjusts to content */
+}
+
+.messageTable th, .messageTable td {
+    padding: 12px 15px;
+    border: 1px solid #333; /* Darker border for the table */
+}
+
+.messageTable th {
+    text-align: center; /* Centers the column names */
+    background-color: lightblue; /* Light grey background for header row */
+    font-weight: bold;
+}
+
+.messageTable td {
+    text-align: left;
+    vertical-align: top;
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.itemsPerPageSelect {
+    padding: 5px;
+    margin-left: 10px;
+    width: 100px; /* Adjust width for select input */
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pageButton {
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 1px solid #007bff;
+    background-color: #fff;
+    color: #007bff;
+    font-size: 16px;
+}
+
+.pageButton:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pageButton.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pageButton:focus {
+    outline: none;
+}
+
+.pageButton.disabled {
+    cursor: not-allowed;
+    background-color: #f1f1f1;
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .viewMessageContainer {
+        width: 90%; /* Make the container slightly narrower on larger tablets and below */
+    }
+
+    .itemsPerPageSelect {
+        width: 80px; /* Smaller width for select input */
+    }
+}
+
+@media (max-width: 768px) {
+    .viewMessageContainer {
+        width: 95%; /* Reduce container width on medium screens */
+        padding: 15px;
+    }
+
+    .messageTable th, .messageTable td {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .controls {
+        flex-direction: column; /* Stack controls on top of each other */
+        align-items: flex-start;
+    }
+
+    .itemsPerPageSelect {
+        width: 100%; /* Make the select input full-width on smaller screens */
+        margin-top: 10px;
+    }
+
+    .pagination {
+        font-size: 14px; /* Smaller font for pagination on small screens */
+    }
+
+    .pageButton {
+        padding: 6px 10px; /* Smaller padding for pagination buttons */
+    }
+}
+
+@media (max-width: 480px) {
+    .viewMessageContainer {
+        width: 100%; /* Full width on small screens */
+        padding: 10px;
+    }
+
+    .messageTable th, .messageTable td {
+        padding: 8px; /* Even smaller padding for very small screens */
+    }
+
+    .pagination {
+        font-size: 12px; /* Adjust font size for very small screens */
+    }
+
+    .pageButton {
+        padding: 5px 8px; /* Even smaller padding for pagination buttons */
+    }
+}

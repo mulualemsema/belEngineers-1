@@ -1,0 +1,97 @@
+/* Reset and ensure footer sticks to the bottom */
+body, html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    background-color: #333; /* Dark background for contrast */
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column; /* Stack items for better control */
+    align-items: center;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info, .footer-year, .social-icons {
+    flex: 1; /* Equal width */
+}
+
+.contact-info {
+    text-align: left;
+    font-size: 14px;
+}
+
+.footer-year {
+    text-align: right;
+    font-size: 14px;
+    color: #aaa; /* Slightly lighter color for subtler look */
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* Highlight LinkedIn color */
+}
+
+.social-icons .twitter:hover {
+    color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icons .youtube:hover {
+    color: #FF0000; /* YouTube red */
+}
+
+/* Logo styling */
+.footer-logo {
+    margin-top: 0;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 150px; /* Set the size of the logo */
+    height: 80px;
+    border-radius: 80%; /* Create avatar form */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .footer-year, .social-icons {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .footer-logo {
+        margin-top: 10px;
+    }
+}
