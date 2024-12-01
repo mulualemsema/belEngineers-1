@@ -3,6 +3,11 @@
 .centered-image.zoomed {
     transform: scale(1.5); /* Zoom in the image */
 }
+.centered-image {
+    width: 70%;
+    height: 70%;
+    margin-bottom: 10px;
+}
 
 /* Optional: Add some responsiveness for smaller screens */
 @media (max-width: 768px) {

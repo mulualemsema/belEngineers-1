@@ -14,7 +14,7 @@ interface Service {
 
 const services: Service[] = [
     {
-        title: "ROADWAY DESIGN ",
+        title: "Roadway Design ",
         description: "Specializing in the design of highways, arterial roads, and local streets, " +
             "ensuring safety, efficiency, and sustainability. Offering end-to-end services, " +
             "from planning to construction, with a focus on traffic flow optimization, geometric design, " +
@@ -22,12 +22,12 @@ const services: Service[] = [
         icon: imageFM112
     },
     {
-        title: "HYDROLOGICAL STUDIES ",
+        title: "Hydrological Studies",
         description: "Specialized in hydrological studies, focusing on watershed analysis, stormwater management, and flood risk assessment to optimize water resource management.Utilizing advanced modeling techniques to design drainage systems that balance environmental impact, regulatory compliance, and long-term sustainability.",
         icon: imageSH80IH35
     },
     {
-        title: "ROADWAY HYDRAULIC DESIGN ",
+        title: "Roadway Hydraulic Design",
         description: "Expert roadway hydraulic design services focused on stormwater management, " +
             "drainage systems, and flood prevention to enhance roadway safety and performance. " +
             "Designing efficient runoff control systems, culverts, and channels that comply with " +
@@ -35,7 +35,7 @@ const services: Service[] = [
         icon: imageSH82IH35
     },
     {
-        title: "BRIDGE HYDRAULIC DESIGN",
+        title: "Bridge Hydraulic Design",
         description: "Offering specialized bridge hydraulic design services to optimize water flow, " +
             "prevent erosion, and ensure structural integrity under varying conditions. " +
             "Providing tailored solutions that comply with environmental standards and " +
@@ -43,7 +43,7 @@ const services: Service[] = [
         icon: imageSH95
     },
     {
-        title: "SIGNING, PAV.MARKING, AND CHANNELIZATION",
+        title: "Signing, Pav.Marking and Channelization",
         description: "Offering professional design and consultancy services for roadway signing, " +
             "pavement marking, and traffic channelization to improve safety and traffic flow. " +
             "Ensuring compliance with local regulations and implementing best practices to enhance " +

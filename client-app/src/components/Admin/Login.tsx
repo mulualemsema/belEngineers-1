@@ -10,30 +10,37 @@ interface LoginProps {
 const Login: React.FC<LoginProps> = ({ setToken }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [currentPassword, setCurrentPassword] = useState(""); // Current password state for reset
     const [newPassword, setNewPassword] = useState("");
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
     const [firstLogin, setFirstLogin] = useState(false);
-    const [token, setLocalToken] = useState<string | null>(null); // Store the token locally
+    const [localToken, setLocalToken] = useState<string | null>(null);
 
     const navigate = useNavigate();
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        setError(null); // Clear previous error
+        setError(null); // Clear previous errors
         setLoading(true);
 
         try {
-            const response = await axios.post("http://localhost:8083/auth/login", {
+            const response = await axios.post("http://localhost:8083/api/users/login", {
                 username,
                 password,
             });
 
-            const { token, firstLogin } = response.data;
+            const rawTokenData = response.data.token; // Get the raw string
+            console.log(rawTokenData); // Debugging purposes
 
-            setToken(token);
-            setLocalToken(token);  // Store the token for future use
+            // Extract values using regular expressions or string manipulation
+            const firstLoginMatch = rawTokenData.match(/firstLogin:(true|false)/);
+            const tokenMatch = rawTokenData.match(/token:([\w.\-]+)/);
+
+            const firstLogin = firstLoginMatch ? firstLoginMatch[1] === "true" : false;
+            const token = tokenMatch ? tokenMatch[1] : null;
+
+            setToken(token); // Set token globally
+            setLocalToken(token); // Save locally for password reset
             setFirstLogin(firstLogin);
 
             if (firstLogin) {
@@ -54,34 +61,32 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         setError(null);
         setLoading(true);
 
-        console.log("Reset Password Request:", { oldPassword: currentPassword, newPassword });
-
         try {
             const config = {
                 headers: {
-                    Authorization: `Bearer ${token}`,
+                    Authorization: `Bearer ${localToken}`,
                 },
             };
 
-            const response = await axios.post("http://localhost:8083/auth/reset-password", {
-                oldPassword: currentPassword,  // Send the correct parameter
-                newPassword,
-            }, config);
-
-            console.log("Password Reset Response:", response.data);
+            await axios.post(
+                "http://localhost:8083/api/users/reset-password",
+                { newPassword },
+                config
+            );
 
             alert("Password reset successful! Please log in again.");
             setFirstLogin(false);
+            setUsername("");
             setPassword("");
             setNewPassword("");
-            setCurrentPassword("");
+            setLocalToken(null);
         } catch (err: any) {
-            console.error("Error during password reset:", err);
             setError(err.response?.data?.message || "Failed to reset password. Please try again.");
         } finally {
             setLoading(false);
         }
     };
+
     return (
         <div className="login-container">
             <h2>{firstLogin ? "Reset Password" : "Admin Login"}</h2>
@@ -118,17 +123,6 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
                 </form>
             ) : (
                 <form onSubmit={handlePasswordReset} className="reset-password-form">
-                    <div className="form-group">
-                        <label htmlFor="current-password">Current Password:</label>
-                        <input
-                            id="current-password"
-                            type="password"
-                            value={currentPassword}
-                            onChange={(e) => setCurrentPassword(e.target.value)}
-                            disabled={loading}
-                            required
-                        />
-                    </div>
                     <div className="form-group">
                         <label htmlFor="new-password">New Password:</label>
                         <input

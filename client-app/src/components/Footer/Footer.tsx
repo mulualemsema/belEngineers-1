@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
             <div className="footer-content">
                 <div className="contact-info">
                     <p><strong>Phone:</strong> (512) 363-0461</p>
-                    <p><strong>Address:</strong> 1110 Connemara Ln, Pflugerville, Travis</p>
+                    <p><strong>Address:</strong> 1110 Connemara Ln, Pflugerville, TX 78660</p>
                     <p><strong>Working Hours:</strong> Mon-Fri, 8:00 AM - 5:00 PM</p>
                 </div>
                 <div className="footer-year">
