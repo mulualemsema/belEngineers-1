@@ -9,7 +9,7 @@ import javax.crypto.SecretKey
 class TokenUtil {
 
     // Secret key for signing JWTs (ensure it's long enough for HMAC)
-    private static final String JWT_SECRET = "aVeryLongAndSecureSecretKeyForJWTs7858656585846WERETER55"
+    private static final String JWT_SECRET = '$2a$12$DZpajYaXlbfSu9AHj8mmLOJHlarMceLck1xYv.gzKWz1sx4wMcU5W'
 
     // Token expiration time (e.g., 1 hour)
     private static final long JWT_EXPIRATION_TIME = 60 * 60 * 1000L

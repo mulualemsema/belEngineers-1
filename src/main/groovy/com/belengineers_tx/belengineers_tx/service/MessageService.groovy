@@ -8,7 +8,7 @@ import jakarta.transaction.Transactional
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
-import java.time.LocalDate
+
 import java.time.LocalDateTime
 
 @Service
@@ -37,7 +37,7 @@ class MessageService {
 
     UserMessage getMessageById(Long id) {
         messageRepository.findById(id)
-                .orElseThrow { -> new MessageNotFoundException("UserMessage not found with id $id") }
+                .orElseThrow { -> new MessageNotFoundException("UserMessage not found with id ${id}") }
     }
 
     List<UserMessage> getAllMessages() {

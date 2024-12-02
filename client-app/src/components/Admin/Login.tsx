@@ -34,7 +34,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
 
             // Extract values using regular expressions or string manipulation
             const firstLoginMatch = rawTokenData.match(/firstLogin:(true|false)/);
-            const tokenMatch = rawTokenData.match(/token:([\w.\-]+)/);
+            const tokenMatch = rawTokenData.match(/token:([\w.-]+)/);
 
             const firstLogin = firstLoginMatch ? firstLoginMatch[1] === "true" : false;
             const token = tokenMatch ? tokenMatch[1] : null;

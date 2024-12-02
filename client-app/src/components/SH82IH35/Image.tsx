@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import './Image.css'; // Importing the CSS for styling
 import bodyImageSH82IH35 from '../picture/SH82IH35.png';
 
-
 const CenteredImageSH82IH35: React.FC = () => {
     const [isZoomed, setIsZoomed] = useState(false); // Track zoom state
 

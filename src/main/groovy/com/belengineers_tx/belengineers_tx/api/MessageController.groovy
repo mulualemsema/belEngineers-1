@@ -30,7 +30,7 @@ class MessageController {
         ResponseEntity.ok(messageService.saveMessage(message))
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/getMessage/{id}")
     ResponseEntity<UserMessage> getMessage(@PathVariable Long id) {
         ResponseEntity.ok(messageService.getMessageById(id))
     }
@@ -45,7 +45,7 @@ class MessageController {
         ResponseEntity.ok(messageService.updateMessage(id, message))
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     ResponseEntity<Void> deleteMessage(@PathVariable Long id) {
         messageService.deleteMessage(id)
         ResponseEntity.noContent().build()

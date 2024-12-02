@@ -1,9 +1,6 @@
 package com.belengineers_tx.belengineers_tx.entity
 
 import jakarta.persistence.*
-import org.springframework.validation.annotation.Validated
-
-import java.time.LocalDate
 import java.time.LocalDateTime
 
 @Entity
