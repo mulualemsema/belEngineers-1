@@ -2,7 +2,7 @@
 FROM openjdk:17-jdk-slim
 
 # Set the working directory inside the container
-WORKDIR /app
+WORKDIR /src
 
 # Copy the Gradle build files and source code to the container
 COPY build.gradle settings.gradle /app/
@@ -10,6 +10,7 @@ COPY src /app/src
 
 # Copy the built JAR file to the working directory
 COPY build/libs/*.jar app.jar
+
 
 # Expose the application port
 EXPOSE 8080
