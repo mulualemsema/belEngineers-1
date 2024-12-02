@@ -8,12 +8,6 @@ WORKDIR /app
 COPY build.gradle settings.gradle /app/
 COPY src /app/src
 
-# Cache dependencies by building in a separate stage
-RUN ./gradlew dependencies --no-daemon
-
-# Build the application
-RUN ./gradlew build --no-daemon
-
 # Copy the built JAR file to the working directory
 COPY build/libs/*.jar app.jar
 
