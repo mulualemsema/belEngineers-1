@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/api/messages")
+@CrossOrigin(origins = "http://localhost:3000")
 class MessageController {
 
     private final MessageService messageService
