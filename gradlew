@@ -242,6 +242,11 @@ fi
 # an unmatched quote.
 #
 
+chmod +x gradlew
+git add gradlew
+git commit -m "Fix gradlew permissions"
+git push
+
 eval "set -- $(
         printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
         xargs -n1 |
