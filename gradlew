@@ -117,12 +117,6 @@ esac
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
 
-chmod +x gradlew
-git add gradlew
-git commit -m "Fix gradlew permissions"
-git push
-
-
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
     if [ -x "$JAVA_HOME/jre/sh/java" ] ; then
@@ -181,8 +175,6 @@ if "$cygwin" || "$msys" ; then
     CLASSPATH=$( cygpath --path --mixed "$CLASSPATH" )
 
     JAVACMD=$( cygpath --unix "$JAVACMD" )
-
-    chmod +x gradlew
 
     # Now convert the arguments - kludge to limit ourselves to /bin/sh
     for arg do
