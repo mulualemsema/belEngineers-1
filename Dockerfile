@@ -11,6 +11,7 @@ COPY src /app/src
 # Copy the built JAR file to the working directory
 COPY . .
 
+
 # Expose the application port
 EXPOSE 8080
 
