@@ -9,7 +9,7 @@ COPY build.gradle settings.gradle /app/
 COPY src /app/src
 
 # Copy the built JAR file to the working directory
-COPY build/libs/*.jar app.jar
+COPY . .
 
 
 # Expose the application port
@@ -18,4 +18,4 @@ EXPOSE 8080
 RUN ./gradlew build
 
 # Set the default command to run the application
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "build/libs/belengineers-tx-0.0.1-SNAPSHOT.jar"]
