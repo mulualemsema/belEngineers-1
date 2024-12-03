@@ -117,6 +117,11 @@ esac
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
 
+chmod +x gradlew
+git add gradlew
+git commit -m "Fix gradlew permissions"
+git push
+
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -241,11 +246,6 @@ fi
 # This will of course break if any of these variables contains a newline or
 # an unmatched quote.
 #
-
-chmod +x gradlew
-git add gradlew
-git commit -m "Fix gradlew permissions"
-git push
 
 eval "set -- $(
         printf '%s\n' "$DEFAULT_JVM_OPTS $JAVA_OPTS $GRADLE_OPTS" |
