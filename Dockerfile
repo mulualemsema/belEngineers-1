@@ -12,7 +12,7 @@ COPY src /app/src
 RUN ./gradlew build
 
 # Copy the built JAR file to the working directory
-COPY build/libs/belengineers-tx-0.0.1-SNAPSHOT.jar /app/
+COPY . .
 
 # Expose the application port
 EXPOSE 8080
