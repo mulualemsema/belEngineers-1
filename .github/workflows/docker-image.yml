@@ -45,3 +45,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Build Docker Image
+        run: |
+          docker build -t belengineers-tx-app
+
