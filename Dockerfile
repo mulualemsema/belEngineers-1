@@ -15,7 +15,5 @@ COPY . .
 # Expose the application port
 EXPOSE 8080
 
-RUN ./gradlew build
-
 # Set the default command to run the application
 CMD ["java", "-jar", "build/libs/belengineers-tx-0.0.1-SNAPSHOT.jar"]
