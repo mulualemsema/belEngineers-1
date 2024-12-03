@@ -1,10 +1,11 @@
 .contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    gap: 500px; /* Space between the form and the address */
+}
+
+.form-section {
+    width: 500px;
     font-family: 'Arial', sans-serif;
 }
 
@@ -27,12 +28,13 @@
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
+    width: 100%; /* Form takes up 50% of the container */
 }
 
 .form-group {
     display: flex;
-    flex-direction: column; /* Ensures inputs are on new lines */
+    flex-direction: column;
     gap: 5px;
 }
 
@@ -63,17 +65,8 @@ input:focus, textarea:focus {
     box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
 }
 
-.submit-button:hover {
-    background-color: blue; /* Keep background color the same on hover */
-}
-
-.container-body {
-    padding: 10px;
-    margin-left: 100px;
-}
-
 .submit-button {
-    width: 10%;
+    width: 70px;
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -81,6 +74,15 @@ input:focus, textarea:focus {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+}
+
+.submit-button:hover {
+    background-color: blue; /* Keep background color the same on hover */
+}
+
+.container-body {
+    padding: 10px;
+    margin-left: 100px;
 }
 
 .notification {
@@ -110,6 +112,27 @@ input:focus, textarea:focus {
     margin-bottom: 20px;
 }
 
+.address-section {
+    width: 40%; /* Address section takes up the remaining 40% of the space */
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: 'Arial', sans-serif;
+    margin-top: -20px;
+}
+
+.address-section h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.address-section p {
+    font-size: 16px;
+    color: #333;
+    width: 250px;
+}
+
 @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -126,4 +149,3 @@ input:focus, textarea:focus {
     margin-top: 5px;
     display: block;
 }
-

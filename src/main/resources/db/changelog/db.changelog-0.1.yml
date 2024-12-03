@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: changelog-0.1.0
-      author: AsratKCSTMARRY
+      author: AsratKCSTMARRYe
       changes:
         - sqlFile:
             dbms: 'postgresql'
@@ -12,7 +12,7 @@ databaseChangeLog:
             stripComments: true
   - changeSet:
         id: changelog-0.1.1
-        author: AsratKaCSTMARRYBDBD
+        author: belengineersAdmin2
         changes:
             - sqlFile:
                   dbms: 'postgresql'

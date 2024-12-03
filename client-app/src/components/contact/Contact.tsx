@@ -81,52 +81,66 @@ const Contact: React.FC = () => {
                 </div>
             )}
 
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <input
-                        type="text"
-                        name="userName"
-                        value={formData.userName}
-                        onChange={handleChange}
-                        placeholder="Name"
-                        required
-                    />
+            <div className="contact-container">
+                <div className="form-section">
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <input
+                                type="text"
+                                name="userName"
+                                value={formData.userName}
+                                onChange={handleChange}
+                                placeholder="Name"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="Email"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="tel"
+                                name="phone"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                placeholder="Phone Number"
+                                required
+                            />
+                            {errors.phone && <span className="error-text">{errors.phone}</span>}
+                        </div>
+                        <div>
+                            <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                placeholder="Message"
+                                required
+                                rows={4}
+                            />
+                        </div>
+                        <button type="submit" className="submit-button">Save</button>
+                    </form>
                 </div>
-                <div>
-                    <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="Email"
-                        required
-                    />
+
+                {/* Address section */}
+                <div className="address-section">
+                    <h3>Our Address</h3>
+                    <p>
+                        1110 Connemara Ln, <br />
+                        Pflugerville, TX 78660 <br />
+                        <br />
+                        Email: demissie903@gmail.com <br />
+                        Phone: (512) 363-0461
+                    </p>
                 </div>
-                <div>
-                    <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="Phone Number"
-                        required
-                    />
-                    {errors.phone && <span className="error-text">{errors.phone}</span>}
-                </div>
-                <div>
-                    <textarea
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Message"
-                        required
-                        rows={4}
-                    />
-                </div>
-                <button type="submit" className="submit-button">Save</button>
-            </form>
-            <br />
-            <br />
+            </div>
         </div>
     );
 };
