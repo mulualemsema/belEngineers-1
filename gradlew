@@ -182,6 +182,8 @@ if "$cygwin" || "$msys" ; then
 
     JAVACMD=$( cygpath --unix "$JAVACMD" )
 
+    chmod +x gradlew
+
     # Now convert the arguments - kludge to limit ourselves to /bin/sh
     for arg do
         if
