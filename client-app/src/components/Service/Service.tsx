@@ -9,7 +9,6 @@ import imageRM3238 from '../picture/RM3238.jpg';
 interface Service {
     title: string;
     description: string;
-    icon: string; // Path to an icon image or a URL
 }
 
 const services: Service[] = [
@@ -18,37 +17,32 @@ const services: Service[] = [
         description: "Specializing in the design of highways, arterial roads, and local streets, " +
             "ensuring safety, efficiency, and sustainability. Offering end-to-end services, " +
             "from planning to construction, with a focus on traffic flow optimization, geometric design, " +
-            "and environmental integration.",
-        icon: imageFM112
+            "and environmental integration."
     },
     {
         title: "Hydrological Studies",
-        description: "Specialized in hydrological studies, focusing on watershed analysis, stormwater management, and flood risk assessment to optimize water resource management.Utilizing advanced modeling techniques to design drainage systems that balance environmental impact, regulatory compliance, and long-term sustainability.",
-        icon: imageSH80IH35
+        description: "Specialized in hydrological studies, focusing on watershed analysis, stormwater management, and flood risk assessment to optimize water resource management.Utilizing advanced modeling techniques to design drainage systems that balance environmental impact, regulatory compliance, and long-term sustainability."
     },
     {
         title: "Roadway Hydraulic Design",
         description: "Expert roadway hydraulic design services focused on stormwater management, " +
             "drainage systems, and flood prevention to enhance roadway safety and performance. " +
             "Designing efficient runoff control systems, culverts, and channels that comply with " +
-            "environmental regulations and optimize long-term durability.",
-        icon: imageSH82IH35
+            "environmental regulations and optimize long-term durability."
     },
     {
         title: "Bridge Hydraulic Design",
         description: "Offering specialized bridge hydraulic design services to optimize water flow, " +
             "prevent erosion, and ensure structural integrity under varying conditions. " +
             "Providing tailored solutions that comply with environmental standards and " +
-            "enhance the durability and safety of bridge structures.",
-        icon: imageSH95
+            "enhance the durability and safety of bridge structures."
     },
     {
         title: "Signing, Pav.Marking and Channelization",
         description: "Offering professional design and consultancy services for roadway signing, " +
             "pavement marking, and traffic channelization to improve safety and traffic flow. " +
             "Ensuring compliance with local regulations and implementing best practices to enhance " +
-            "visibility, reduce congestion, and guide motorists effectively.",
-        icon: imageRM3238
+            "visibility, reduce congestion, and guide motorists effectively."
     }
 
 
@@ -63,7 +57,7 @@ const OurService = () => {
             <div className="serviceGrid">
                 {services.map((service, index) => (
                     <div key={index} className="serviceCard">
-                        <img src={service.icon} alt={service.title} className="serviceIcon" />
+                        <div className="serviceIcon" />
                         <h3>{service.title}</h3>
                         <p>{service.description}</p>
                     </div>

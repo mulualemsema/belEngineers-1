@@ -35,94 +35,96 @@ const Header: React.FC = () => {
                 <span className="phone-number">(512) 363-0461</span>
             </div>
 
-            <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-                <div className="logo-container">
-                    <img src="/logo.JPG" alt="Logo" className="logo-image"/>
-                    <h3 className="Bel-name">BEL Engineers LLC</h3>
-                </div>
-                <button className="menu-toggle" onClick={toggleMenu}>
-                    {menuOpen ? "Close" : "Menu"}
-                </button>
-                <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-                    <ul className="nav-links">
-                        <li>
-                            <a
-                                href="/"
-                                onClick={() => handleLinkClick('/')}
-                                className={activeLink === '/' ? 'active' : ''}
-                            >
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/aboutUs"
-                                onClick={() => handleLinkClick('/aboutUs')}
-                                className={activeLink === '/aboutUs' ? 'active' : ''}
-                            >
-                                About Us
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/service"
-                                onClick={() => handleLinkClick('/service')}
-                                className={activeLink === '/service' ? 'active' : ''}
-                            >
-                                Our Service
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/certification"
-                                onClick={() => handleLinkClick('/certification')}
-                                className={activeLink === '/certification' ? 'active' : ''}
-                            >
-                                Certification
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/contact"
-                                onClick={() => handleLinkClick('/contact')}
-                                className={activeLink === '/contact' ? 'active' : ''}
-                            >
-                                Contact Us
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/safety"
-                                onClick={() => handleLinkClick('/safety')}
-                                className={activeLink === '/safety' ? 'active' : ''}
-                            >
-                                Safety
-                            </a>
-                        </li>
-                        <li>
-                            {/* Replaced "Admin" text with an admin icon */}
-                            <a
-                                href="/admin"
-                                onClick={() => handleLinkClick('/admin')}
-                                className={activeLink === '/admin' ? 'active' : ''}
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="currentColor"
-                                    width="24px"
-                                    height="24px"
-                                    className="admin-icon"
+            <div className="header-container">
+                <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+                    <div className="logo-container">
+                        <img src="/logo.png" alt="Logo" className="logo-image"/>
+                        <h3 className="Bel-name">BEL Engineers LLC</h3>
+                    </div>
+                    <button className="menu-toggle" onClick={toggleMenu}>
+                        {menuOpen ? "Close" : "Menu"}
+                    </button>
+                    <nav className={`nav ${menuOpen ? 'open' : ''}`}>
+                        <ul className="nav-links">
+                            <li>
+                                <a
+                                    href="/"
+                                    onClick={() => handleLinkClick('/')}
+                                    className={activeLink === '/' ? 'active' : ''}
                                 >
-                                    <path
-                                        d="M12 2l7 4v6c0 5.25-3.75 9.25-7 10-3.25-.75-7-4.75-7-10V6l7-4zm0 2.18l-5 2.86V12c0 4.05 2.81 7.6 5 8.7 2.19-1.1 5-4.65 5-8.7V7.04l-5-2.86z"
-                                    />
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/aboutUs"
+                                    onClick={() => handleLinkClick('/aboutUs')}
+                                    className={activeLink === '/aboutUs' ? 'active' : ''}
+                                >
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/service"
+                                    onClick={() => handleLinkClick('/service')}
+                                    className={activeLink === '/service' ? 'active' : ''}
+                                >
+                                    Our Service
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/certification"
+                                    onClick={() => handleLinkClick('/certification')}
+                                    className={activeLink === '/certification' ? 'active' : ''}
+                                >
+                                    Certification
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/contact"
+                                    onClick={() => handleLinkClick('/contact')}
+                                    className={activeLink === '/contact' ? 'active' : ''}
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/safety"
+                                    onClick={() => handleLinkClick('/safety')}
+                                    className={activeLink === '/safety' ? 'active' : ''}
+                                >
+                                    Safety
+                                </a>
+                            </li>
+                            <li>
+                                {/* Replaced "Admin" text with an admin icon */}
+                                <a
+                                    href="/admin"
+                                    onClick={() => handleLinkClick('/admin')}
+                                    className={activeLink === '/admin' ? 'active' : ''}
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        width="24px"
+                                        height="24px"
+                                        className="admin-icon"
+                                    >
+                                        <path
+                                            d="M12 2l7 4v6c0 5.25-3.75 9.25-7 10-3.25-.75-7-4.75-7-10V6l7-4zm0 2.18l-5 2.86V12c0 4.05 2.81 7.6 5 8.7 2.19-1.1 5-4.65 5-8.7V7.04l-5-2.86z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
         </>
     );
 };

@@ -110,9 +110,7 @@ const Body = () => {
                                                                             designed roadway geometry.
                                                                     </li>
                                                                     <li>
-                                                                            Created phased construction schedules to
-                                                                            ensure
-                                                                            project efficiency.
+                                                                            Created phased construction schedules.
                                                                     </li>
 
                                                             </div>
@@ -248,7 +246,7 @@ const Body = () => {
                                                                     </p>
 
                                                                     <li>
-                                                                            Designed a 6-mile roadway widening project,
+                                                                            Designed about 6-mile roadway widening project,
                                                                             including the addition of a center turn lane
                                                                             and shoulders.
                                                                     </li>

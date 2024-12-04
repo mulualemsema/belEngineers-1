@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="footer-logo">
-                <img src='./logo.JPG' alt="BEL Engineers Logo" className="logo-avatar" />
+                <img src='./logo.png' alt="BEL Engineers Logo" className="logo-avatar" />
             </div>
         </footer>
     );

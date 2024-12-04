@@ -4,7 +4,7 @@
     justify-content: flex-end; /* Aligns content to the right */
     align-items: center;
     padding: 5px 20px; /* Adds padding to the strip */
-    background-color: darkblue; /* Blue background for the strip */
+    background-color: #333; /* Blue background for the strip */
     color: white; /* White text for contrast */
     font-size: 14px;
     position: fixed;
@@ -16,7 +16,6 @@
 
 .phone-icon {
     margin-right: 5px;
-    color: yellow; /* Yellow color for the phone icon */
     font-size: 16px;
 }
 
@@ -30,26 +29,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 15px;
-    background-color: #fff;
+    padding: 20px 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-    position: sticky;
-    top: 0;
+    position: fixed; /* Fixed position to make the header always stay at the top */
+    top: 0; /* Adjust top positioning to account for the height of the top strip */
+    width: 100%; /* Make the header span the full width of the page */
     z-index: 1000;
     font-size: 18px;
-}
-
-.header.scrolled {
-    background-color: #f8f8f8;
+    background-color: #B2F7EF;
 }
 
 .logo-image {
-    width: 250px;
-    height: 50px;
-    padding: 15px;
+    padding: 5px;
     color: blue;
     font-size: 20px;
+    width: 90px;
+    border-radius: 80%; /* Create avatar form */
+    margin-top: 5px;
 }
 
 .menu-toggle {
@@ -58,6 +54,7 @@
     border: none;
     font-size: 16px;
     cursor: pointer;
+    color: blue;
 }
 
 .nav {
@@ -75,6 +72,7 @@
 
 .nav-links li {
     margin-left: 20px;
+    margin-top: 20px;
 }
 
 /* Blue color for specific links */
@@ -83,18 +81,25 @@
 .nav-links a[href="/service"],
 .nav-links a[href="/certification"],
 .nav-links a[href="/contact"],
-.nav-links a[href="/safety"],
-.nav-links a[href="/admin"] {
+.nav-links a[href="/safety"] {
     color: blue; /* Highlighted links */
     font-weight: bold;
 }
 
-.nav-links a:hover {
+.nav-links a[href="/admin"] {
+    color: lightblue;
+}
+
+.nav-links a:hover [href="/admin"] {
+    color: lightblue;
+}
+
+.nav-links a.active:hover {
     color: #007bff; /* Add hover effect */
 }
 
 .nav-links a {
-    text-decoration:blue;
+    text-decoration: blue;
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -103,6 +108,10 @@
 .nav-links a.active {
     color: red;
     font-weight: bold;
+}
+
+.Bel-name {
+    margin-left: -20px;
 }
 
 /* Responsive styles for mobile */
@@ -134,14 +143,13 @@
 
     .menu-toggle {
         display: none;
-        background-color: transparent;
         border: none;
-        font-size: 18px;
+        font-size: 16px;
         cursor: pointer;
     }
 
     .header.scrolled .menu-toggle {
-        color: white;
+        color: blue;
     }
 
     /* Adjust top strip for smaller screens */
@@ -177,14 +185,13 @@
     .menu-toggle {
         display: flex;
         color: blue;
-        background-color: transparent;
     }
 
     .nav {
         display: none; /* Hide by default */
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: 60px; /* Adjust to place the menu below the fixed header */
         left: 0;
         width: 100%;
     }
@@ -219,7 +226,7 @@
 
 .Bel-name {
     font-size: 20px; /* Adjust the text size */
-    margin-left: -80px;
+    margin-left: -20px;
     color: blue;
 }
 
@@ -237,4 +244,3 @@
         display: block;
     }
 }
-

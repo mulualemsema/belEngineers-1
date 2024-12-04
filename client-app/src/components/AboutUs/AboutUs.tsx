@@ -28,9 +28,13 @@ const AboutUs = () => {
                                 <img src={imageDemissie}
                                      alt="Founder"
                                 />
-                                <h4>Demissie M. Sema, P.E. </h4>
-                                <p>Founder of BEL Engineers LLC</p>
+                                <p>Demissie M. Sema, P.E. </p>
                             </div>
+                        </div>
+                        <div className="name-founder">
+                            <center>
+                                Founder of BEL Engineers LLC
+                            </center>
                         </div>
                     </div>
                 </div>

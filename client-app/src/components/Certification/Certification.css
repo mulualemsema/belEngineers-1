@@ -7,6 +7,7 @@
     padding: 20px;
     gap: 10px;
     width: 100%;
+    margin-top: 120px;
 }
 
 .certification-heading {
@@ -57,8 +58,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 10px;
-    max-width: 35%;
+    gap: 5px;
+    max-width: 40%;
 }
 
 .txdot-heading {

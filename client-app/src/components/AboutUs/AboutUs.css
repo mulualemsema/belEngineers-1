@@ -5,6 +5,7 @@
     color: #333;
     padding: 20px;
     background-color: #f9f9f9;
+    top: 700px;
 }
 
 /* Section title */
@@ -12,7 +13,6 @@
     font-size: 20px;
     text-align: center;
     color: #333;
-    margin-bottom: 20px;
 }
 
 /* Paragraph styling for better readability */
@@ -66,27 +66,30 @@
 }
 
 /* Member name */
-.member h4 {
+.member p {
     font-size: 18px;
     color: #333;
-    margin-top: 90px; /* Accounts for the avatar's overlap */
+    margin-top: 100px; /* Accounts for the avatar's overlap */
     margin-bottom: 5px;
     font-family: 'Arial', sans-serif;
 }
 
-/* Member position/title */
-.member p {
-    font-size: 1rem;
-    color: #333;
+.name-founder p {
     font-family: 'Arial', sans-serif;
 }
 
 /* Container styles for responsiveness */
 .container {
     max-width: 800px;
-    margin: auto;
     padding: 20px;
     color: #333;
+    margin-top: 100px;
+    margin-left: 20%;
+}
+
+.bel-founder p {
+    color: #333;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Responsive Design */
@@ -108,7 +111,7 @@
         top: -60px;
     }
 
-    .member h4 {
+    .member p {
         margin-top: 80px;
     }
 }
@@ -127,7 +130,7 @@
         top: -50px;
     }
 
-    .member h4 {
+    .member p {
         margin-top: 70px;
     }
 

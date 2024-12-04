@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                                 name="userName"
                                 value={formData.userName}
                                 onChange={handleChange}
-                                placeholder="Name"
+                                placeholder="Full Name"
                                 required
                             />
                         </div>
@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                placeholder="Email"
+                                placeholder="Email Address"
                                 required
                             />
                         </div>
@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
-                                placeholder="Message"
+                                placeholder="Please provide your message here."
                                 required
                                 rows={4}
                             />
@@ -136,7 +136,7 @@ const Contact: React.FC = () => {
                         1110 Connemara Ln, <br />
                         Pflugerville, TX 78660 <br />
                         <br />
-                        Email: demissie903@gmail.com <br />
+                        Email: demissie@belengineers.com <br />
                         Phone: (512) 363-0461
                     </p>
                 </div>

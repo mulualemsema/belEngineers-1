@@ -15,6 +15,9 @@ const Certification: React.FC = () => {
 
             <div className="certification-content">
                 <div className="logos-section">
+                    <div className="logo-dbe">
+                        <img src={dbe} alt="Disadvantage Business Enterprise DBE"/>
+                    </div>
                     <div className="logo-hub">
                         <img
                             src={hub}
@@ -22,21 +25,17 @@ const Certification: React.FC = () => {
                         />
                     </div>
                     <div className="logo-mbe">
-                        <img src={mbe} alt="Minority Business MBE" />
-                    </div>
-                    <div className="logo-dbe">
-                        <img src={dbe} alt="Disadvantage Business Enterprise DBE" />
+                        <img src={mbe} alt="Minority Business MBE"/>
                     </div>
                 </div>
                 <div className="txdot-section">
                     <h2 className="txdot-heading">TxDOT Pre-certification</h2>
                     <ul className="txdot-list">
-                        <li>Roadway Design</li>
-                        <li>Hydraulics Design</li>
-                        <li>Hydrological Studies</li>
-                        <li>Roadway Hydraulic Design</li>
-                        <li>Bridge Hydraulic Design</li>
-                        <li>Signing, Pav. Marking, and Channelization</li>
+                        <li>(4.2.1) ROADWAY DESIGN </li>
+                        <li>(8.1.1) SIGNING, PAV.MARKING, AND    CHANNELIZATION </li>
+                        <li>(10.1.1) HYDROLOGICAL STUDIES </li>
+                        <li>(10.2.1) ROADWAY HYDRAULIC DESIGN </li>
+                        <li>(10.3.1) BRIDGE HYDRAULIC DESIGN </li>
                     </ul>
                 </div>
             </div>
