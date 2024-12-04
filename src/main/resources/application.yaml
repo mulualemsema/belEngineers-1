@@ -7,9 +7,9 @@ spring:
   profiles:
     active: ${ENV:local}
   datasource:
-    url: jdbc:postgresql://dpg-ct7hjb23esus73bsdnrg-a.virginia-postgres.render.com:5432/belengineersdb
-    username: belengineersdb_user
-    password: hNXuKlCDjJ0P5gcYpE9RAUDjjC5hxpW9
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
