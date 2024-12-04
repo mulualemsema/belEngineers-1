@@ -16,7 +16,7 @@ const ResetPassword = ({ token }) => {
         setLoading(true); // Show loader
         try {
             await axios.post(
-                "http://localhost:8083/auth/reset-password",
+                'https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/auth/reset-password',
                 { oldPassword, newPassword },
                 {
                     headers: {

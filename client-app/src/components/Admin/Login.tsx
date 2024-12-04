@@ -24,7 +24,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         setLoading(true);
 
         try {
-            const response = await axios.post("http://localhost:8083/api/users/login", {
+            const response = await axios.post("https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/users/login", {
                 username,
                 password,
             });
@@ -69,7 +69,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
             };
 
             await axios.post(
-                "http://localhost:8083/api/users/reset-password",
+                "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/users/reset-password",
                 { newPassword },
                 config
             );
