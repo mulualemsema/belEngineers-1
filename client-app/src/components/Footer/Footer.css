@@ -69,7 +69,7 @@ body, html {
 
 /* Logo styling */
 .footer-logo {
-    margin-top: 0;
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -77,6 +77,7 @@ body, html {
     width: 150px; /* Set the size of the logo */
     height: 80px;
     border-radius: 80%; /* Create avatar form */
+    align-items: center;
 }
 
 /* Responsive styling */

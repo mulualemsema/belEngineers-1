@@ -41,12 +41,10 @@
 }
 
 .logo-image {
-    padding: 5px;
-    color: blue;
-    font-size: 20px;
-    width: 90px;
-    border-radius: 80%; /* Create avatar form */
-    margin-top: 5px;
+    padding: 10px;
+    width: 100px;
+    border-radius: 90%; /* Create avatar form */
+    margin-top: 10px;
 }
 
 .menu-toggle {
@@ -111,7 +109,7 @@
     font-weight: bold;
 }
 
-.Bel-name {
+.Bel-name h3 {
     margin-left: -20px;
 }
 
@@ -221,7 +219,7 @@
 
 .Bel-name {
     font-size: 20px; /* Adjust the text size */
-    margin-left: -25px;
+    margin-left: -5px;
     color: blue;
 }
 
@@ -238,6 +236,7 @@
     .nav.open {
         display: block;
     }
+
 }
 
 /* Show the menu toggle on smaller devices */
