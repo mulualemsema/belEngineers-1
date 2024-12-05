@@ -29,7 +29,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: fixed; /* Fixed position to make the header always stay at the top */
     top: 0; /* Adjust top positioning to account for the height of the top strip */
@@ -43,8 +43,8 @@
 .logo-image {
     padding: 10px;
     width: 100px;
-    border-radius: 90%; /* Create avatar form */
-    margin-top: 10px;
+    border-radius: 80%; /* Create avatar form */
+    margin-top: 15px;
 }
 
 .menu-toggle {
@@ -214,7 +214,6 @@
 .logo-container {
     display: flex;
     align-items: center; /* Vertically align the items */
-    margin-top: 5px;
 }
 
 .Bel-name {
