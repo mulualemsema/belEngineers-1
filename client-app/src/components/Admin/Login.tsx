@@ -20,25 +20,19 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
-        setError(null); // Clear previous errors
+        setError(null);
         setLoading(true);
 
         try {
             const response = await axios.post(
                 "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/users/login",
-                {
-                    username,
-                    password,
-                }
+                { username, password }
             );
 
-            // Assuming the response contains a structured object with token and firstLogin flag
             const { token, firstLogin } = response.data;
 
-            console.log(response.data); // Debugging purposes
-
-            setToken(token); // Set token globally
-            setLocalToken(token); // Save locally for password reset
+            setToken(token);
+            setLocalToken(token);
             setFirstLogin(firstLogin);
 
             if (firstLogin) {
@@ -47,12 +41,8 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
                 alert("Login successful!");
                 navigate("/admin-dashboard");
             }
-        } catch (err) {
-            // TypeScript 3.2.1 does not support optional chaining, so we need to handle this manually
-            const errorMessage = err && err.response && err.response.data && err.response.data.message
-                ? err.response.data.message
-                : "Invalid credentials. Please try again.";
-            setError(errorMessage);
+        } catch (err: any) {
+            setError(err?.response?.data?.message || "Invalid credentials. Please try again.");
         } finally {
             setLoading(false);
         }
@@ -70,16 +60,10 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         }
 
         try {
-            const config = {
-                headers: {
-                    Authorization: `Bearer ${localToken}`,
-                },
-            };
-
             await axios.post(
                 "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/users/reset-password",
                 { newPassword },
-                config
+                { headers: { Authorization: `Bearer ${localToken}` } }
             );
 
             alert("Password reset successful! Please log in again.");
@@ -88,73 +72,67 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
             setPassword("");
             setNewPassword("");
             setLocalToken(null);
-            setToken(null); // Clear global token
-        } catch (err) {
-            // TypeScript 3.2.1 does not support optional chaining, so we need to handle this manually
-            const errorMessage = err && err.response && err.response.data && err.response.data.message
-                ? err.response.data.message
-                : "Failed to reset password. Please try again.";
-            setError(errorMessage);
+            setToken(null);
+        } catch (err: any) {
+            setError(err?.response?.data?.message || "Failed to reset password. Please try again.");
         } finally {
             setLoading(false);
         }
     };
 
     return (
-        <>
-            <div>
-                <h2>{firstLogin ? "Reset Password" : "Admin Login"}</h2>
-                {loading && <p>Processing...</p>}
-                {error && <p>{error}</p>}
+        <div className="login-container">
+            <h2>{firstLogin ? "Reset Password" : "Admin Login"}</h2>
+            {loading && <p className="loading">Processing...</p>}
+            {error && <p className="error-message">{error}</p>}
 
-                {!firstLogin ? (
-                    <form onSubmit={handleLogin} className="login-form">
-                        <div>
-                            <label htmlFor="username">Username:</label>
-                            <input
-                                id="username"
-                                type="text"
-                                value={username}
-                                onChange={(e:any) => setUsername(e.target.value)}
-                                disabled={loading}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="password">Password:</label>
-                            <input
-                                id="password"
-                                type="password"
-                                value={password}
-                                onChange={(e:any) => setPassword(e.target.value)}
-                                disabled={loading}
-                                required
-                            />
-                        </div>
-                        <button type="submit" className="btn-submit" disabled={loading}>
-                            {loading ? "Processing..." : "Login"}
-                        </button>
-                    </form>
-                ) : (
-                    <form onSubmit={handlePasswordReset} className="reset-password-form">
-                        <div>
-                            <label htmlFor="new-password">New Password:</label>
-                            <input
-                                id="new-password"
-                                type="password"
-                                value={newPassword}
-                                onChange={(e:any) => setNewPassword(e.target.value)}
-                                disabled={loading}
-                                required
-                            />
-                        </div>
-                        <button type="submit" className="btn-submit" disabled={loading}>
-                            {loading ? "Processing..." : "Reset Password"}
-                        </button>
-                    </form>
-                )}
-            </div>
-        </>
+            {!firstLogin ? (
+                <form onSubmit={handleLogin} className="login-form">
+                    <div className="form-group">
+                        <label htmlFor="username">Username:</label>
+                        <input
+                            id="username"
+                            type="text"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            disabled={loading}
+                            required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            id="password"
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            disabled={loading}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="btn-submit" disabled={loading}>
+                        {loading ? "Processing..." : "Login"}
+                    </button>
+                </form>
+            ) : (
+                <form onSubmit={handlePasswordReset} className="reset-password-form">
+                    <div className="form-group">
+                        <label htmlFor="new-password">New Password:</label>
+                        <input
+                            id="new-password"
+                            type="password"
+                            value={newPassword}
+                            onChange={(e) => setNewPassword(e.target.value)}
+                            disabled={loading}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className="btn-submit" disabled={loading}>
+                        {loading ? "Processing..." : "Reset Password"}
+                    </button>
+                </form>
+            )}
+        </div>
     );
 };
 

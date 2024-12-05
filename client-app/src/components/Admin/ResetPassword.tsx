@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './ResetPassword.css';
+import "./ResetPassword.css";
 
 interface ResetPasswordProps {
     token: string | null;
@@ -10,66 +10,77 @@ interface ResetPasswordProps {
 const ResetPassword: React.FC<ResetPasswordProps> = ({ token }) => {
     const [oldPassword, setOldPassword] = useState<string>("");
     const [newPassword, setNewPassword] = useState<string>("");
-    const [message, setMessage] = useState<string>("");
-    const [loading, setLoading] = useState<boolean>(false); // Loader state
-    const navigate = useNavigate(); // React Router hook for navigation
+    const [message, setMessage] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(false);
+    const navigate = useNavigate();
 
     const handleReset = async (e: React.FormEvent) => {
         e.preventDefault();
-        setLoading(true); // Show loader
+
+        if (!token) {
+            setMessage("Authorization token is missing. Please log in again.");
+            return;
+        }
+
+        setLoading(true);
+        setMessage(null);
+
         try {
             await axios.post(
-                'https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/auth/reset-password',
+                "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/auth/reset-password",
                 { oldPassword, newPassword },
                 {
                     headers: {
-                        Authorization: token,
+                        Authorization: `Bearer ${token}`, // Fix token formatting
                     },
                 }
             );
-            setMessage("Password reset successful");
 
-            // Navigate to Admin Dashboard after successful reset
+            setMessage("Password reset successful! Redirecting to dashboard...");
             setTimeout(() => navigate("/admin-dashboard"), 2000);
-        } catch (err) {
-            // Manually checking if `err` is an object and has the expected properties
-            if (err && err.response && err.response.status === 403) {
-                setMessage("Incorrect current password");
-            } else if (err && err.response && err.response.status === 401) {
-                setMessage("Unauthorized: Invalid or expired token");
+        } catch (err: any) {
+            if (err.response?.status === 403) {
+                setMessage("Incorrect current password. Please try again.");
+            } else if (err.response?.status === 401) {
+                setMessage("Unauthorized: Invalid or expired token. Please log in again.");
             } else {
-                setMessage("Something went wrong");
+                setMessage("Something went wrong. Please try again.");
             }
         } finally {
-            setLoading(false); // Hide loader
+            setLoading(false);
         }
     };
 
     return (
-        <div>
+        <div className="reset-password-container">
             <h2>Reset Password</h2>
-            {loading && <p>Loading...</p>} {/* Loader */}
-            <form onSubmit={handleReset}>
-                <div>
-                    <label>Current Password:</label>
+            {loading && <p className="loading-message">Processing...</p>}
+            {message && <p className="message">{message}</p>}
+
+            <form onSubmit={handleReset} className="reset-password-form">
+                <div className="form-group">
+                    <label htmlFor="oldPassword">Current Password:</label>
                     <input
+                        id="oldPassword"
                         type="password"
                         value={oldPassword}
-                        onChange={(e:any) => setOldPassword(e.target.value)}
-                        disabled={loading} // Disable input during loading
+                        onChange={(e) => setOldPassword(e.target.value)}
+                        disabled={loading}
+                        required
                     />
                 </div>
-                <div>
-                    <label>New Password:</label>
+                <div className="form-group">
+                    <label htmlFor="newPassword">New Password:</label>
                     <input
+                        id="newPassword"
                         type="password"
                         value={newPassword}
-                        onChange={(e:any) => setNewPassword(e.target.value)}
-                        disabled={loading} // Disable input during loading
+                        onChange={(e) => setNewPassword(e.target.value)}
+                        disabled={loading}
+                        required
                     />
                 </div>
-                {message && <p>{message}</p>}
-                <button type="submit" disabled={loading}> {/* Disable button during loading */}
+                <button type="submit" className="btn-submit" disabled={loading}>
                     {loading ? "Processing..." : "Reset Password"}
                 </button>
             </form>

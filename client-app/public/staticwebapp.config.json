@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "route": "/aboutUs",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/service",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/certification",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/contact",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/safety",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/admin",
+      "serve": "/index.html"
+    },
+    {
+      "route": "/{*}",
+      "serve": "/index.html"
+    }
+  ]
+}
