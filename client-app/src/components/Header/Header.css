@@ -67,8 +67,8 @@
 .nav-links {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
 }
 
 .nav-links li {
@@ -123,7 +123,7 @@
         width: 100%;
         background-color: rgba(255, 255, 255, 0.8); /* 40% opacity white */
         position: absolute;
-        top: 20px; /* Positioning below the header */
+        top: 200px; /* Positioning below the header */
         left: 0;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -167,7 +167,6 @@
 
 @media (max-width: 480px) {
     .top-strip {
-        flex-direction: column; /* Stack content vertically on very small screens */
         align-items: center;
         text-align: center;
     }
@@ -245,7 +244,6 @@
 @media (max-width: 768px) {
     .menu-toggle {
         font-size: 18px; /* Slightly larger font for better usability */
-        top: 10px;
     }
 }
 
@@ -268,6 +266,7 @@
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         right: 0;
+        top: 200px; /* Adjust based on your header height */
     }
 
     .menu-toggle {
@@ -286,7 +285,7 @@
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: absolute; /* Ensure it overlays correctly */
-        top: 50px; /* Adjust based on your header height */
+        top: 200px; /* Adjust based on your header height */
         right: 0;
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center align items */
@@ -297,8 +296,6 @@
         font-size: 18px; /* Slightly smaller icon for mobile */
         color: blue;
         cursor: pointer;
-        position: absolute; /* Ensure placement over content */
-        top: 10px; /* Adjust as needed */
         right: 10px; /* Adjust as needed */
         z-index: 10; /* Ensure visibility above other elements */
     }
@@ -316,7 +313,7 @@
         background-color: #fff;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: absolute; /* Ensure it overlays correctly */
-        top: 50px; /* Adjust based on your header height */
+        top: 200px; /* Adjust based on your header height */
         right: 0;
         flex-direction: column; /* Stack items vertically */
         align-items: center; /* Center align items */
@@ -327,8 +324,6 @@
         font-size: 18px; /* Slightly smaller icon for mobile */
         color: blue;
         cursor: pointer;
-        position: absolute; /* Ensure placement over content */
-        top: 10px; /* Adjust as needed */
         right: 10px; /* Adjust as needed */
         z-index: 10; /* Ensure visibility above other elements */
     }
@@ -337,4 +332,6 @@
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 }
+
+
 
