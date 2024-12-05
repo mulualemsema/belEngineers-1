@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import './Image.css'; // Importing the CSS for styling
+import './Image.css';
 import bodyImageFM112 from '../picture/FM112.jpg';
 
 const CenteredImagePage: React.FC = () => {

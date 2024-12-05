@@ -1,10 +1,6 @@
 import React from "react";
 import "./Safety.css";
-import imageFM112 from '../picture/FM112.jpg';
-import imageSH80IH35 from '../picture/SH 80 IH 35.png';
-import imageSH82IH35 from '../picture/SH82IH35.png';
-import imageSH95 from '../picture/SH95.jpg';
-import imageRM3238 from '../picture/RM3238.jpg';
+
 interface SafetyPractice {
     title: string;
     description: string;
