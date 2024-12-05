@@ -26,51 +26,44 @@ const App: React.FC = () => {
     // @ts-ignore
     return (
         <BrowserRouter>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<Body/>} />
-                    <Route path="/aboutUs" element={<AboutUs/>} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/service" element={<Service />} />
-                    <Route path="/safety" element={<Safety />} />
-                    <Route path="/images" element={<CenteredImagePage />} />
-                    <Route path="/imagesSH80IH35" element={<CenteredImageSH80IH35 />} />
-                    <Route path="/imagesSH82IH35" element={<CenteredImageSH82IH35 />} />
-                    <Route path="/imagesSH95" element={<CenteredImageSH95 />} />
-                    <Route path="/imagesRM3238" element={<CenteredImageRM3238 />} />
-                    <Route path="/certification" element={<Certification />} />
-                    <Route
-                        path="/view-message"
-                        element={
-                            <ProtectedRoute token={token}>
-                                <ViewMessage />
-                            </ProtectedRoute>
-                        }
-                    />
-                    {/* Login Route */}
-                    <Route path="/admin" element={<Login setToken={setToken} />} />
-
-                    {/* Protected Reset Password Route */}
-                    <Route
-                        path="/reset-password"
-                        element={
-                            <ProtectedRoute token={token}>
-                                <ResetPassword token={token} />
-                            </ProtectedRoute>
-                        }
-                    />
-
-                    {/* Protected Admin Dashboard Route */}
-                    <Route
-                        path="/admin-dashboard"
-                        element={
-                            <ProtectedRoute token={token}>
-                                <AdminDashboard />
-                            </ProtectedRoute>
-                        }
-                    />
-                </Routes>
-            </Router>
+            <Routes>
+                <Route path="/" element={<Body />} />
+                <Route path="/aboutUs" element={<AboutUs />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/service" element={<Service />} />
+                <Route path="/safety" element={<Safety />} />
+                <Route path="/images" element={<CenteredImagePage />} />
+                <Route path="/imagesSH80IH35" element={<CenteredImageSH80IH35 />} />
+                <Route path="/imagesSH82IH35" element={<CenteredImageSH82IH35 />} />
+                <Route path="/imagesSH95" element={<CenteredImageSH95 />} />
+                <Route path="/imagesRM3238" element={<CenteredImageRM3238 />} />
+                <Route path="/certification" element={<Certification />} />
+                <Route
+                    path="/view-message"
+                    element={
+                        <ProtectedRoute token={token}>
+                            <ViewMessage />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route path="/admin" element={<Login setToken={setToken} />} />
+                <Route
+                    path="/reset-password"
+                    element={
+                        <ProtectedRoute token={token}>
+                            <ResetPassword token={token} />
+                        </ProtectedRoute>
+                    }
+                />
+                <Route
+                    path="/admin-dashboard"
+                    element={
+                        <ProtectedRoute token={token}>
+                            <AdminDashboard />
+                        </ProtectedRoute>
+                    }
+                />
+            </Routes>
         </BrowserRouter>
     );
 };
