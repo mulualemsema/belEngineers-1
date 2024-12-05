@@ -1,7 +1,31 @@
 {
   "routes": [
     {
-      "route": "/*",
+      "route": "/aboutUs",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/service",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/certification",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/contact",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/safety",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/admin",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/{*.}",
       "rewrite": "/index.html"
     }
   ]
