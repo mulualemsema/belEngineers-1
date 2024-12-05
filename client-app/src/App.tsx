@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {BrowserRouter, BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Navigate, Route, Routes} from 'react-router-dom';
 import Contact from "./components/contact/Contact";
 import Body from "./components/Home/Body";
 import AboutUs from "./components/AboutUs/AboutUs";
