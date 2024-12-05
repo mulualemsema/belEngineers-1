@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, BrowserRouter as Router, Navigate, Route, Routes} from 'react-router-dom';
 import Contact from "./components/contact/Contact";
 import Body from "./components/Home/Body";
 import AboutUs from "./components/AboutUs/AboutUs";
@@ -25,51 +25,53 @@ const App: React.FC = () => {
     const [token, setToken] = useState<string | null>(null); // Explicitly type the state as string | null
     // @ts-ignore
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Body/>} />
-                <Route path="/aboutUs" element={<AboutUs/>} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/service" element={<Service />} />
-                <Route path="/safety" element={<Safety />} />
-                <Route path="/images" element={<CenteredImagePage />} />
-                <Route path="/imagesSH80IH35" element={<CenteredImageSH80IH35 />} />
-                <Route path="/imagesSH82IH35" element={<CenteredImageSH82IH35 />} />
-                <Route path="/imagesSH95" element={<CenteredImageSH95 />} />
-                <Route path="/imagesRM3238" element={<CenteredImageRM3238 />} />
-                <Route path="/certification" element={<Certification />} />
-                <Route
-                    path="/view-message"
-                    element={
-                        <ProtectedRoute token={token}>
-                            <ViewMessage />
-                        </ProtectedRoute>
-                    }
-                />
-                {/* Login Route */}
-                <Route path="/admin" element={<Login setToken={setToken} />} />
+        <BrowserRouter>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Body/>} />
+                    <Route path="/aboutUs" element={<AboutUs/>} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/service" element={<Service />} />
+                    <Route path="/safety" element={<Safety />} />
+                    <Route path="/images" element={<CenteredImagePage />} />
+                    <Route path="/imagesSH80IH35" element={<CenteredImageSH80IH35 />} />
+                    <Route path="/imagesSH82IH35" element={<CenteredImageSH82IH35 />} />
+                    <Route path="/imagesSH95" element={<CenteredImageSH95 />} />
+                    <Route path="/imagesRM3238" element={<CenteredImageRM3238 />} />
+                    <Route path="/certification" element={<Certification />} />
+                    <Route
+                        path="/view-message"
+                        element={
+                            <ProtectedRoute token={token}>
+                                <ViewMessage />
+                            </ProtectedRoute>
+                        }
+                    />
+                    {/* Login Route */}
+                    <Route path="/admin" element={<Login setToken={setToken} />} />
 
-                {/* Protected Reset Password Route */}
-                <Route
-                    path="/reset-password"
-                    element={
-                        <ProtectedRoute token={token}>
-                            <ResetPassword token={token} />
-                        </ProtectedRoute>
-                    }
-                />
+                    {/* Protected Reset Password Route */}
+                    <Route
+                        path="/reset-password"
+                        element={
+                            <ProtectedRoute token={token}>
+                                <ResetPassword token={token} />
+                            </ProtectedRoute>
+                        }
+                    />
 
-                {/* Protected Admin Dashboard Route */}
-                <Route
-                    path="/admin-dashboard"
-                    element={
-                        <ProtectedRoute token={token}>
-                            <AdminDashboard />
-                        </ProtectedRoute>
-                    }
-                />
-            </Routes>
-        </Router>
+                    {/* Protected Admin Dashboard Route */}
+                    <Route
+                        path="/admin-dashboard"
+                        element={
+                            <ProtectedRoute token={token}>
+                                <AdminDashboard />
+                            </ProtectedRoute>
+                        }
+                    />
+                </Routes>
+            </Router>
+        </BrowserRouter>
     );
 };
 
