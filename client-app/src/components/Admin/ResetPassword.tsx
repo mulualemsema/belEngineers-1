@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import './ResetPassword.css';
 
 interface ResetPasswordProps {
-    token: string;
+    token: string | null;
 }
 
 const ResetPassword: React.FC<ResetPasswordProps> = ({ token }) => {
