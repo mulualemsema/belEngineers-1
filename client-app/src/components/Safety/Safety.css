@@ -4,24 +4,24 @@
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
-    margin-left: 50px;
+    margin: 100px auto; /* Center the container */
 }
 
 /* Title styling */
 .safetyContainer h2 {
-    font-size: 18px;
+    font-size: 24px;
     color: #444;
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif;
+    text-align: center; /* Center the title */
 }
 
 /* Grid styling */
 .safetyGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 5px;
-    margin-top: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px;
 }
 
 /* Card styling */
@@ -41,16 +41,15 @@
 
 /* Icon styling */
 .safetyIcon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin-bottom: 15px;
 }
 
 /* Title in card */
 .safetyCard h3 {
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
-    margin-bottom: 10px;
     font-family: 'Arial', sans-serif;
 }
 
@@ -61,11 +60,26 @@
     line-height: 1.5;
 }
 
-/* Responsive design */
+/* Responsive Design */
+
+/* For tablets and smaller devices (up to 768px) */
 @media (max-width: 768px) {
     .safetyContainer {
         width: 95%;
-        padding: 15px;
+        padding: 10px;
+    }
+
+    .safetyGrid {
+        gap: 5px; /* Reduce spacing between cards */
+    }
+
+    .safetyCard {
+        padding: 5px;
+    }
+
+    .safetyIcon {
+        width: 50px;
+        height: 50px;
     }
 
     .safetyCard h3 {
@@ -75,9 +89,29 @@
     .safetyCard p {
         font-size: 14px;
     }
+}
+
+/* For small mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .safetyGrid {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        gap: 10px; /* Further reduce spacing */
+    }
+
+    .safetyCard {
+        padding: 5px;
+    }
 
     .safetyIcon {
         width: 40px;
         height: 40px;
+    }
+
+    .safetyCard h3 {
+        font-size: 16px;
+    }
+
+    .safetyCard p {
+        font-size: 14px;
     }
 }

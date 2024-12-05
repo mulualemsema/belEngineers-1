@@ -25,6 +25,26 @@
       "rewrite": "/index.html"
     },
     {
+      "route": "/images",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/imagesSH80IH35",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/imagesSH82IH35",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/imagesSH95",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/imagesRM3238",
+      "rewrite": "/index.html"
+    },
+    {
       "route": "/{*.}",
       "rewrite": "/index.html"
     }

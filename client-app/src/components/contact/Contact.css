@@ -158,3 +158,67 @@ input:focus, textarea:focus {
     margin-top: 5px;
     display: block;
 }
+
+/* For tablets (up to 768px) */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-section,
+    .address-section {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .submit-button {
+        max-width: 100px;
+    }
+}
+
+/* For mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .contact-header {
+        font-size: 20px;
+        margin-top: 80px;
+    }
+
+    .contact-subheader {
+        font-size: 16px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    .submit-button {
+        max-width: 80px;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .address-section {
+        padding: 10px;
+    }
+
+    .notification {
+        font-size: 14px;
+    }
+}
+
+/* For larger screens (above 1200px) */
+@media (min-width: 1200px) {
+    .contact-container {
+        gap: 50px;
+    }
+
+    .form-section {
+        width: 50%;
+    }
+
+    .address-section {
+        width: 40%;
+    }
+}

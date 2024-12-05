@@ -81,7 +81,7 @@ const Body = () => {
                                     <FaChevronRight />
                             </button>
                     </div>
-                    <h2 className="section-title">Some Previous Experience</h2>
+                    <h2 className="section-title">Some of the founder's Previous Experience</h2>
                     <div className="image-grid">
                             <div className="image-grid">
                                     <div className="image-container">
@@ -153,7 +153,7 @@ const Body = () => {
                                                     </a>
                                             </div>
                                             <p className="image-caption-below">
-                                                    DLT Intersection Improvement SH 80
+                                                    DLT Intersection Improvement
                                             </p>
                                     </div>
                                     <div className="image-container">
@@ -190,7 +190,7 @@ const Body = () => {
                                                     </a>
                                             </div>
                                             <p className="image-caption-below">
-                                                    DLT Intersection Improvement SL 82
+                                                    DLT Intersection Improvement
                                             </p>
                                     </div>
                                     <div className="image-container">
@@ -227,7 +227,7 @@ const Body = () => {
                                                     </a>
                                             </div>
                                             <p className="image-caption-below">
-                                                    Willis Creek Bridge Replacement
+                                                    Bridge Replacement
                                             </p>
                                     </div>
                                     <div className="image-container">

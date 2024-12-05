@@ -121,7 +121,7 @@
         display: none; /* Hide navigation links initially */
         flex-direction: column; /* Stack links vertically */
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.4); /* 40% opacity white */
+        background-color: rgba(255, 255, 255, 0.8); /* 40% opacity white */
         position: absolute;
         top: 20px; /* Positioning below the header */
         left: 0;
@@ -183,11 +183,6 @@
 
 /* Adjustments for mobile menu */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-        color: blue;
-    }
-
     .nav {
         display: none; /* Hide by default */
         flex-direction: column;
@@ -243,5 +238,61 @@
 
     .nav.open {
         display: block;
+    }
+}
+
+/* Show the menu toggle on smaller devices */
+@media (max-width: 768px) {
+    .menu-toggle {
+        font-size: 18px; /* Slightly larger font for better usability */
+        top: 10px;
+    }
+}
+
+/* Further adjustments for very small screens (up to 480px) */
+@media (max-width: 480px) {
+    .menu-toggle {
+        font-size: 20px; /* Larger font for better visibility */
+        color: darkblue; /* Adjusted color for contrast */
+    }
+}
+
+
+
+
+/* For tablets (up to 768px) */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 6px; /* Adjust spacing for vertical layout */
+        width: 100%; /* Full-width navigation */
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        right: 0;
+    }
+
+    .menu-toggle {
+        font-size: 20px;
+        color: blue;
+        cursor: pointer;
+        right: 0;
+    }
+}
+
+/* For mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 10px; /* Reduced padding for smaller screens */
+    }
+
+    .logo {
+        font-size: 20px; /* Smaller logo font size */
+    }
+
+    .menu-toggle {
+        font-size: 24px; /* Larger toggle button for better usability */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Adjust link font size */
     }
 }

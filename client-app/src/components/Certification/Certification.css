@@ -1,3 +1,4 @@
+/* Base Styles */
 .certification-container {
     display: flex;
     flex-direction: column;
@@ -11,7 +12,7 @@
 }
 
 .certification-heading {
-    font-size: 20px;
+    font-size: 24px;
     margin-bottom: 10px;
     font-family: 'Arial', sans-serif;
 }
@@ -49,7 +50,7 @@
 }
 
 .logos-section img {
-    max-width: 60%;  /* Further reduced size */
+    max-width: 60%;
     height: auto;
 }
 
@@ -60,6 +61,7 @@
     align-items: flex-start;
     gap: 5px;
     max-width: 40%;
+    margin-bottom: 250px;
 }
 
 .txdot-heading {
@@ -70,7 +72,7 @@
 }
 
 .txdot-list {
-    list-style-type: disc;  /* Adds bullet points */
+    list-style-type: disc;
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -84,13 +86,17 @@
     text-indent: 10px;
 }
 
+/* Responsive Styles */
+
+/* For tablets (up to 768px) */
 @media (max-width: 768px) {
     .certification-container {
         padding: 15px;
+        margin-top: 120px;
     }
 
     .certification-heading {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .certification-paragraph {
@@ -110,5 +116,68 @@
     .txdot-section {
         max-width: 100%;
         text-align: center;
+        margin-bottom: 150px;
+        position: relative;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+
+    .txdot-heading {
+        font-size: 16px;
+    }
+}
+
+/* For mobile devices (up to 480px) */
+@media (max-width: 480px) {
+    .certification-container {
+        padding: 10px;
+        margin-top: 100px;
+    }
+
+    .certification-heading {
+        font-size: 16px;
+    }
+
+    .certification-paragraph {
+        font-size: 0.9rem;
+    }
+
+    .logos-section div {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .logos-section img {
+        max-width: 80%;
+    }
+
+    .txdot-section {
+        margin-bottom: 100px;
+    }
+
+    .txdot-heading {
+        font-size: 14px;
+    }
+
+    .txdot-list {
+        font-size: 14px;
+    }
+}
+
+/* For larger screens (above 1200px) */
+@media (min-width: 1200px) {
+    .certification-container {
+        margin-top: 100px;
+    }
+    .certification-content {
+        gap: 30px;
+    }
+
+    .logos-section {
+        max-width: 50%;
+    }
+
+    .txdot-section {
+        max-width: 35%;
     }
 }
