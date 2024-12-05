@@ -278,21 +278,63 @@
     }
 }
 
-/* For mobile devices (up to 480px) */
-@media (max-width: 480px) {
-    .header {
-        padding: 5px 10px; /* Reduced padding for smaller screens */
-    }
-
-    .logo {
-        font-size: 20px; /* Smaller logo font size */
+/* For mobile phones (up to 576px) */
+@media (max-width: 576px) {
+    .nav-links {
+        gap: 4px; /* Reduce spacing further for compact layout */
+        width: 100%; /* Full-width navigation */
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: absolute; /* Ensure it overlays correctly */
+        top: 50px; /* Adjust based on your header height */
+        right: 0;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 10px 0; /* Add some padding */
     }
 
     .menu-toggle {
-        font-size: 24px; /* Larger toggle button for better usability */
+        font-size: 18px; /* Slightly smaller icon for mobile */
+        color: blue;
+        cursor: pointer;
+        position: absolute; /* Ensure placement over content */
+        top: 10px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
+        z-index: 10; /* Ensure visibility above other elements */
     }
 
-    .nav-links a {
-        font-size: 14px; /* Adjust link font size */
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 }
+
+/* For mobile phones (up to 576px) */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 4px; /* Reduce spacing further for compact layout */
+        width: 100%; /* Full-width navigation */
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: absolute; /* Ensure it overlays correctly */
+        top: 50px; /* Adjust based on your header height */
+        right: 0;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 10px 0; /* Add some padding */
+    }
+
+    .menu-toggle {
+        font-size: 18px; /* Slightly smaller icon for mobile */
+        color: blue;
+        cursor: pointer;
+        position: absolute; /* Ensure placement over content */
+        top: 10px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
+        z-index: 10; /* Ensure visibility above other elements */
+    }
+
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+}
+
