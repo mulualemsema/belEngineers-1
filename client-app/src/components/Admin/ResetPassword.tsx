@@ -3,15 +3,18 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import './ResetPassword.css';
 
-// @ts-ignore
-const ResetPassword = ({ token }) => {
-    const [oldPassword, setOldPassword] = useState("");
-    const [newPassword, setNewPassword] = useState("");
-    const [message, setMessage] = useState("");
-    const [loading, setLoading] = useState(false); // Loader state
+interface ResetPasswordProps {
+    token: string;
+}
+
+const ResetPassword: React.FC<ResetPasswordProps> = ({ token }) => {
+    const [oldPassword, setOldPassword] = useState<string>("");
+    const [newPassword, setNewPassword] = useState<string>("");
+    const [message, setMessage] = useState<string>("");
+    const [loading, setLoading] = useState<boolean>(false); // Loader state
     const navigate = useNavigate(); // React Router hook for navigation
 
-    const handleReset = async (e: { preventDefault: () => void; }) => {
+    const handleReset = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true); // Show loader
         try {
@@ -29,15 +32,13 @@ const ResetPassword = ({ token }) => {
             // Navigate to Admin Dashboard after successful reset
             setTimeout(() => navigate("/admin-dashboard"), 2000);
         } catch (err) {
-            // @ts-ignore
-            if (err.response?.status === 403) {
+            // Manually checking if `err` is an object and has the expected properties
+            if (err && err.response && err.response.status === 403) {
                 setMessage("Incorrect current password");
-            } else { // @ts-ignore
-                if (err.response?.status === 401) {
-                                setMessage("Unauthorized: Invalid or expired token");
-                            } else {
-                                setMessage("Something went wrong");
-                            }
+            } else if (err && err.response && err.response.status === 401) {
+                setMessage("Unauthorized: Invalid or expired token");
+            } else {
+                setMessage("Something went wrong");
             }
         } finally {
             setLoading(false); // Hide loader
@@ -45,7 +46,7 @@ const ResetPassword = ({ token }) => {
     };
 
     return (
-        <div className={"restContainer"}>
+        <div>
             <h2>Reset Password</h2>
             {loading && <p>Loading...</p>} {/* Loader */}
             <form onSubmit={handleReset}>
@@ -54,7 +55,7 @@ const ResetPassword = ({ token }) => {
                     <input
                         type="password"
                         value={oldPassword}
-                        onChange={(e) => setOldPassword(e.target.value)}
+                        onChange={(e:any) => setOldPassword(e.target.value)}
                         disabled={loading} // Disable input during loading
                     />
                 </div>
@@ -63,7 +64,7 @@ const ResetPassword = ({ token }) => {
                     <input
                         type="password"
                         value={newPassword}
-                        onChange={(e) => setNewPassword(e.target.value)}
+                        onChange={(e:any) => setNewPassword(e.target.value)}
                         disabled={loading} // Disable input during loading
                     />
                 </div>

@@ -16,14 +16,13 @@ import CenteredImageSH82IH35 from "./components/SH82IH35/Image";
 import CenteredImageSH95 from "./components/SH95/Image";
 import CenteredImageRM3238 from "./components/RM3238/Image";
 
-
 // @ts-ignore
 const ProtectedRoute = ({ token, children }) => {
     return token ? children : <Navigate to="/" />;
 };
 
 const App: React.FC = () => {
-    const [token, setToken] = useState(null); // Stores the authentication token
+    const [token, setToken] = useState<string | null>(null); // Explicitly type the state as string | null
     // @ts-ignore
     return (
         <Router>
