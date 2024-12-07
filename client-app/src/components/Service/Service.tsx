@@ -8,11 +8,18 @@ interface Service {
 
 const services: Service[] = [
     {
-        title: "Roadway Design ",
+        title: "Roadway Design",
         description: "Specializing in the design of highways, arterial roads, and local streets, " +
             "ensuring safety, efficiency, and sustainability. Offering end-to-end services, " +
             "from planning to construction, with a focus on traffic flow optimization, geometric design, " +
             "and environmental integration."
+    },
+    {
+        title: "Roadway PS&E",
+        description: "Developing complete Plans, Specifications, and Estimates (PS&E) for roadway projects, " +
+            "including geometric design, traffic control plans, drainage, and cost estimating. Skilled in ensuring " +
+            "compliance with federal, state, and local standards while coordinating with multidisciplinary teams. " +
+            "Experienced in producing accurate, detailed deliverables that meet client and regulatory expectations."
     },
     {
         title: "Hydrological Studies",

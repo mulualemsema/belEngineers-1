@@ -8,25 +8,21 @@ interface SafetyPractice {
 
 const safetyPractices: SafetyPractice[] = [
     {
-        title: "Road Safety Standards",
-        description: "Ensure road designs adhere to international safety standards, including proper lane marking, signage, and visibility enhancements."
-    },
-    {
-        title: "Hydraulic Structure Durability",
-        description: "Utilize high-quality materials to prevent structural failures in hydraulic systems, ensuring long-term performance and safety."
-    },
-    {
-        title: "Emergency Preparedness",
-        description: "Incorporate emergency response plans, such as flood control mechanisms in hydraulics and escape routes in roadways."
+        title: "Roadway Safety",
+        description: "Roadway safety emphasizes proper design, clear signage, skid-resistant pavements, " +
+            "effective drainage, safety barriers, adequate lighting, and speed management to prevent " +
+            "accidents and protect users."
     },
     {
         title: "Environmental Considerations",
-        description: "Implement eco-friendly designs to minimize environmental impact, including water conservation in hydraulics and reduced emissions in road designs."
+        description: "Stabilize slopes, manage runoff, and use vegetation or geotextiles. Prevent " +
+            "pollution with sediment traps and filtration, and include wildlife crossings to reduce habitat disruption"
     },
     {
         title: "Regular Inspections",
-        description: "Schedule regular inspections to identify and address wear and tear in both roadways and hydraulic structures."
+        description: "Conduct regular inspections to detect and address wear and tear in roadways and hydraulic structures."
     },
+
 ];
 
 const Safety = () => {
@@ -38,7 +34,6 @@ const Safety = () => {
             <div className="safetyGrid">
                 {safetyPractices.map((practice, index) => (
                     <div key={index} className="safetyCard">
-                        <div className="safetyIcon" />
                         <h3>{practice.title}</h3>
                         <p>{practice.description}</p>
                     </div>

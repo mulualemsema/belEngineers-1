@@ -41,10 +41,11 @@
 }
 
 .logo-image {
-    padding: 10px;
-    width: 100px;
+    padding: 5px;
+    width: 20%;
+    height: 20%;
     border-radius: 80%; /* Create avatar form */
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .menu-toggle {
@@ -113,17 +114,27 @@
     margin-left: -20px;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the items */
+}
+
+.Bel-name {
+    font-size: 20px; /* Adjust the text size */
+    margin-top: 40px;
+    color: blue;
+}
+
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide navigation links initially */
-        flex-direction: column; /* Stack links vertically */
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.8); /* 40% opacity white */
+        background-color: rgba(255, 255, 255, 0.4); /* 40% opacity white */
         position: absolute;
-        top: 200px; /* Positioning below the header */
-        left: 0;
+        top: 50px; /* Positioning below the header */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: block; /* Hide by default */
+        justify-content: center;
     }
 
     .nav-links.show {
@@ -131,62 +142,12 @@
     }
 
     .nav-links li {
-        padding: 1rem;
-        border-bottom: 1px solid #eee;
-        text-align: center;
+        padding: 5px;
+
     }
 
     .nav-links li:last-child {
         border-bottom: none;
-    }
-
-    .menu-toggle {
-        display: none;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .header.scrolled .menu-toggle {
-        color: blue;
-    }
-
-    /* Adjust top strip for smaller screens */
-    .top-strip {
-        justify-content: center; /* Center align content on smaller screens */
-        font-size: 12px; /* Reduce font size */
-        padding: 5px 10px;
-    }
-
-    .phone-number {
-        margin-right: 0; /* Remove extra margin on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .top-strip {
-        align-items: center;
-        text-align: center;
-    }
-
-    .phone-icon {
-        margin: 0; /* Center icon and number */
-    }
-
-    .phone-number {
-        margin-top: 5px; /* Add slight spacing between icon and number */
-    }
-}
-
-/* Adjustments for mobile menu */
-@media (max-width: 768px) {
-    .nav {
-        display: none; /* Hide by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px; /* Adjust to place the menu below the fixed header */
-        left: 0;
-        width: 100%;
     }
 
     /* Add border-top only when menu is open */
@@ -201,93 +162,54 @@
         width: 100px;
     }
 
-    .nav-links {
-        display: block;
-    }
 
     .nav-links li {
         margin: 10px 0;
         text-align: center;
     }
-}
 
-.logo-container {
-    display: flex;
-    align-items: center; /* Vertically align the items */
-}
-
-.Bel-name {
-    font-size: 20px; /* Adjust the text size */
-    margin-left: -5px;
-    color: blue;
-}
-
-/* Media query for small screens */
-@media (max-width: 768px) {
     .nav {
         display: none;
     }
 
     .menu-toggle {
         display: block;
+        font-size: 16px;
     }
 
-    .nav.open {
-        display: block;
-    }
-
-}
-
-/* Show the menu toggle on smaller devices */
-@media (max-width: 768px) {
-    .menu-toggle {
-        font-size: 18px; /* Slightly larger font for better usability */
-    }
-}
-
-/* Further adjustments for very small screens (up to 480px) */
-@media (max-width: 480px) {
-    .menu-toggle {
-        font-size: 20px; /* Larger font for better visibility */
-        color: darkblue; /* Adjusted color for contrast */
-    }
-}
-
-
-
-
-/* For tablets (up to 768px) */
-@media (max-width: 768px) {
-    .nav-links {
-        gap: 6px; /* Adjust spacing for vertical layout */
-        width: 100%; /* Full-width navigation */
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        right: 0;
-        top: 200px; /* Adjust based on your header height */
-    }
-
-    .menu-toggle {
-        font-size: 20px;
+    .header.scrolled .menu-toggle {
         color: blue;
-        cursor: pointer;
-        right: 0;
+    }
+
+    /* Adjust top strip for smaller screens */
+    .top-strip {
+        justify-content: center; /* Center align content on smaller screens */
+        font-size: 16px; /* Reduce font size */
+        padding: 5px 10px;
+    }
+
+    .phone-number {
+        margin-right: 0; /* Remove extra margin on smaller screens */
+    }
+
+    .Bel-name {
+        font-size: 16px; /* Adjust the text size */
+        margin-top: 40px;
+        color: blue;
     }
 }
+
 
 /* For mobile phones (up to 576px) */
 @media (max-width: 576px) {
     .nav-links {
-        gap: 4px; /* Reduce spacing further for compact layout */
         width: 100%; /* Full-width navigation */
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.5); /* 40% opacity white */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        position: absolute; /* Ensure it overlays correctly */
-        top: 200px; /* Adjust based on your header height */
-        right: 0;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align items */
-        padding: 10px 0; /* Add some padding */
+        top: 50px; /* Adjust based on your header height */
+        padding: 5px 0; /* Add some padding */
+        justify-content: center;
+        right: 25vw;
     }
 
     .menu-toggle {
@@ -300,22 +222,51 @@
 
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .Bel-name {
+        font-size: 16px; /* Adjust the text size */
+        margin-top: 40px;
+        color: blue;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .top-strip {
+        align-items: center;
+        text-align: center;
+    }
+
+    .phone-icon {
+        margin: 0; /* Center icon and number */
+    }
+
+    .phone-number {
+        margin-top: 5px; /* Add slight spacing between icon and number */
+    }
+
+    .menu-toggle {
+        font-size: 18px; /* Larger font for better visibility */
+        color: darkblue; /* Adjusted color for contrast */
+    }
+
+    .Bel-name {
+        font-size: 16px; /* Adjust the text size */
+        margin-top: 40px;
+        color: blue;
     }
 }
 
 /* For mobile phones (up to 576px) */
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .nav-links {
-        gap: 4px; /* Reduce spacing further for compact layout */
         width: 100%; /* Full-width navigation */
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.4); /* 40% opacity white */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        position: absolute; /* Ensure it overlays correctly */
-        top: 200px; /* Adjust based on your header height */
-        right: 0;
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align items */
-        padding: 10px 0; /* Add some padding */
+        top: 50px; /* Adjust based on your header height */
+        padding: 5px 0; /* Add some padding */
+        justify-content: center;
     }
 
     .menu-toggle {
@@ -329,7 +280,12 @@
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
-}
 
+    .Bel-name {
+        font-size: 16px; /* Adjust the text size */
+        margin-top: 40px;
+        color: blue;
+    }
+}
 
 

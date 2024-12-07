@@ -8,8 +8,9 @@
 
 .serviceContainer h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 26px;
     margin-bottom: 20px;
+    margin-top: 50px;
 }
 
 /* Grid layout for the service cards */
@@ -72,12 +73,9 @@
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
-    .serviceContainer h2 {
-        font-size: 1.5rem;
-    }
 
     .serviceCard {
-        padding: 10px;
+        padding: 5px;
     }
 
     .serviceIcon {
@@ -87,15 +85,27 @@
     .serviceCard h3 {
         font-size: 1.125rem;
     }
+    .serviceGrid {
+        margin-left: -40px;
+    }
+
+    .serviceContainer h2 {
+        text-align: center;
+        font-size: 22px;
+        margin-top: 5px;
+    }
 }
 
 @media (max-width: 480px) {
     .serviceContainer h2 {
+        text-align: center;
         font-size: 20px;
+        margin-top: 5px;
     }
 
     .serviceGrid {
         grid-template-columns: 1fr; /* Single column layout on smaller screens */
+        margin-left: -40px;
     }
 
     .serviceCard {

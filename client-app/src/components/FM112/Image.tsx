@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import './Image.css';
-import bodyImageFM112 from '../picture/FM112.jpg';
+import bodyImageFM112 from './FM112.jpg';
 
 const CenteredImagePage: React.FC = () => {
     const [isZoomed, setIsZoomed] = useState(false); // Track zoom state

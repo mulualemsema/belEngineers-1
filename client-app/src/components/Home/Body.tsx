@@ -246,7 +246,8 @@ const Body = () => {
                                                                     </p>
 
                                                                     <li>
-                                                                            Designed about 6-mile roadway widening project,
+                                                                            Designed about 6-mile roadway widening
+                                                                            project,
                                                                             including the addition of a center turn lane
                                                                             and shoulders.
                                                                     </li>
@@ -266,6 +267,40 @@ const Body = () => {
                                             </div>
                                             <p className="image-caption-below">
                                                     Road Widening Project
+                                            </p>
+                                    </div>
+                                    <div className="image-container">
+                                            <div className="image-wrapper">
+
+                                                    <img
+                                                        src={bodyImageSH95}
+                                                        alt="Placeholder 2"
+                                                        className="grid-image"
+                                                    />
+                                                    <div className="image-caption-hover">
+                                                            <p>
+                                                                    Roadway PS&E
+                                                            </p>
+
+                                                            <li>
+                                                                    Developing complete Plans, Specifications, and
+                                                                    Estimates (PS&E) for roadway projects,
+                                                                    including geometric design, traffic control plans,
+                                                                    drainage, and cost estimating.
+                                                                    Skilled in ensuring compliance with federal, state,
+                                                                    and local standards while
+                                                                    coordinating with multidisciplinary teams.
+                                                                    Experienced in producing accurate,
+                                                                    detailed deliverables that meet client and
+                                                                    regulatory expectations.
+                                                            </li>
+
+
+                                                    </div>
+
+                                            </div>
+                                            <p className="image-caption-below">
+                                                    Roadway PS&E
                                             </p>
                                     </div>
                             </div>

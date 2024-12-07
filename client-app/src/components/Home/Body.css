@@ -68,10 +68,12 @@ body, html {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 3 images equally spaced in a row */
-    gap: 10px; /* Increased spacing between images */
+    gap: 5px; /* Increased spacing between images */
     justify-content: center;
+    margin-top: -90px;
+    margin-left: 170px;
     align-items: center;
-    margin: 10px auto; /* Increased margin */
+
     width: 80vw; /* Increased width of the grid */
 }
 
@@ -91,6 +93,11 @@ body, html {
 
 .view-all-btn:hover {
     background-color: #0056b3;
+}
+
+.image-container {
+    width: 800px;
+    height: 250px;
 }
 
 /* Keyframe animation for zoom effect */
@@ -118,7 +125,8 @@ body, html {
     justify-content: center; /* Center the cards horizontally */
     gap: 20px; /* Space between the cards */
     padding: 0 140px; /* Adds space from the left and right of the viewport */
-    margin: 10px auto; /* Adds vertical spacing and centers the container */
+    margin-top: 200px;
+    margin-left: 150px;
     max-width: 1200px; /* Optional: Limits the container width for better design */
     flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
 }
@@ -178,16 +186,6 @@ body, html {
     background-color: #0056b3;
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
-    }
-
-    .carousel {
-        height: 40vh; /* Slightly smaller height on small screens */
-    }
-}
 
 .title-overlay {
     position: absolute;
@@ -212,235 +210,19 @@ body, html {
     margin: 20px 0; /* Default spacing */
 }
 
-@keyframes zoom-in-out {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
 .carousel {
     position: relative;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .carousel {
-        height: 70vh; /* Reduce height for medium screens */
-    }
-
-    .carousel-image {
-        width: 95%; /* Slightly larger images on smaller screens */
-    }
-}
-
-@media (max-width: 992px) {
-    .carousel {
-        height: 60vh; /* Further reduction for smaller screens */
-    }
-
-    .carousel-image {
-        width: 100%;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel {
-        height: 50vh; /* Half the viewport height for mobile devices */
-    }
-
-    .carousel-image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .title {
-        font-size: 26px; /* Slightly smaller for medium screens */
-        top: -10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel {
-        height: 40vh; /* Smaller height for very small devices */
-    }
-
-    .carousel-image {
-        width: 100%;
-        height: 100%;
-    }
-
-    .title {
-        font-size: 26px; /* Slightly smaller for medium screens */
-        top: -10px;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .title {
-        font-size: 26px; /* Slightly smaller for medium screens */
-        top: -10px;
-    }
-
-    .title-overlay {
-        left: 100px; /* Adjust positioning */
-    }
-}
-
-@media (max-width: 992px) {
-    .title {
-        font-size: 26px; /* Further reduce font size */
-        top: -10px;
-    }
-
-    .title-overlay {
-        left: 80px; /* Center text better on smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 20px; /* Smaller font size for tablets */
-        top: -10px;
-    }
-
-    .title-overlay {
-        left: 50px; /* Adjust to center better on narrow screens */
-    }
-}
-
-@media (max-width: 576px) {
-    .title {
-        font-size: 18px; /* Compact size for mobile devices */
-        top: -10px;
-    }
-
-    .title-overlay {
-        left: 20px; /* Minimal horizontal offset for very small screens */
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .section-title {
-        font-size: 20px; /* Slightly smaller for medium screens */
-        margin: 15px 0; /* Adjust vertical spacing */
-    }
-}
-
-@media (max-width: 992px) {
-    .section-title {
-        font-size: 20px; /* Smaller font for smaller screens */
-        margin: 10px 0; /* Reduce spacing */
-    }
-}
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 18px; /* Compact size for tablets */
-    }
-    .title {
-        font-size: 26px; /* Slightly smaller for medium screens */
-        top: -10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 16px; /* Smallest size for mobile screens */
-    }
-    .title {
-        font-size: 26px; /* Slightly smaller for medium screens */
-        top: -10px;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .title {
-        font-size: 24px; /* Slightly smaller font size */
-        text-align: left; /* Adjust alignment for larger tablet screens */
-        top: -10px;
-    }
-}
-
-@media (max-width: 992px) {
-    .title {
-        font-size: 22px; /* Reduce font size for smaller tablets */
-        text-align: center; /* Center alignment for narrower devices */
-        top: -10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 20px; /* Further reduction for tablets */
-        top: -10px;
-        text-align: center; /* Ensure centered text for most tablets */
-    }
-}
-
-@media (max-width: 576px) {
-    .title {
-        font-size: 18px; /* Smallest size for mobile devices */
-        text-align: center; /* Always centered on small screens */
-        top: -10px;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .section-title {
-        font-size: 22px;
-        margin: 15px 0;
-        padding-top: 40px; /* Reduce top padding for medium screens */
-    }
-}
-
-@media (max-width: 992px) {
-    .section-title {
-        font-size: 20px;
-        margin: 10px 0;
-        padding-top: 30px; /* Further reduce padding for smaller screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 18px;
-        padding-top: 20px; /* Compact padding for tablets */
-    }
-}
-
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 16px;
-        padding-top: 15px; /* Minimal padding for mobile devices */
-    }
-    .title {
-        font-size: 20px; /* Slightly smaller for medium screens */
-        margin-top: 0;
-    }
-}
 
 /* Parent container styling */
 .image-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px; /* Space between images */
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 1px;
-    box-sizing: border-box;
+    gap: 5px; /* Space between images */
 }
 
 .image-wrapper {
     position: relative;
-    width: 100%;
-    height: 100%;
+
 }
 
 .grid-image {
@@ -498,7 +280,69 @@ body, html {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+    .carousel {
+        height: 70vh; /* Reduce height for medium screens */
+    }
+
+    .carousel-image {
+        width: 95%; /* Slightly larger images on smaller screens */
+    }
+
+    .title {
+        font-size: 24px; /* Slightly smaller font size */
+        text-align: left; /* Adjust alignment for larger tablet screens */
+        top: -10px;
+    }
+
+    .title-overlay {
+        left: 100px; /* Adjust positioning */
+    }
+
+    .section-title {
+        font-size: 22px;
+        margin: 15px 0;
+        padding-top: 40px; /* Reduce top padding for medium screens */
+    }
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr); /* 4 images per row on large screens */
+        gap: 10px; /* Increased spacing for better layout */
+        width: 70vw; /* Adjusted grid width */
+    }
+
+    .carousel-btn {
+        padding: 12px; /* Slightly larger buttons */
+        font-size: 20px; /* Increased font size */
+        margin-top: 40px;
+    }
+}
+
 @media (max-width: 992px) {
+    .carousel {
+        height: 60vh; /* Further reduction for smaller screens */
+    }
+
+    .carousel-image {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 22px; /* Reduce font size for smaller tablets */
+        text-align: center; /* Center alignment for narrower devices */
+        top: -10px;
+    }
+
+    .title-overlay {
+        left: 80px; /* Center text better on smaller screens */
+    }
+
+    .section-title {
+        font-size: 20px;
+        margin: 10px 0;
+        padding-top: 30px; /* Further reduce padding for smaller screens */
+    }
+
     .image-caption-hover {
         font-size: 0.75rem; /* Slightly smaller font size for tablets */
         padding: 12px; /* Reduced padding for medium screens */
@@ -510,9 +354,35 @@ body, html {
         width: 100%;
         height: 100%;
     }
+
 }
 
 @media (max-width: 768px) {
+    .carousel {
+        height: 50vh; /* Half the viewport height for mobile devices */
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 20px; /* Further reduction for tablets */
+        top: -10px;
+        text-align: center; /* Ensure centered text for most tablets */
+    }
+
+    .title-overlay {
+        left: 50px; /* Adjust to center better on narrow screens */
+        margin-top: -120px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        padding-top: 20px; /* Compact padding for tablets */
+    }
+
     .image-caption-hover {
         font-size: 0.65rem; /* Compact font size for smaller screens */
         padding: 8px; /* Reduced padding for small devices */
@@ -520,64 +390,25 @@ body, html {
     }
 
     .image-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
+        margin-left: -30px;
+        margin-right: 20px;
+        width: 80%;
+        height: auto;
     }
-}
 
-@media (max-width: 576px) {
-    .image-caption-hover {
-        font-size: 0.6rem; /* Smallest font size for mobile */
-        padding: 4px; /* Minimal padding for mobile devices */
-        line-height: 0.8; /* Tighter line height for compactness */
-    }
-    .image-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-/* For larger screens (above 1200px) */
-@media (min-width: 1200px) {
     .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* 4 images per row on large screens */
-        gap: 10px; /* Increased spacing for better layout */
-        width: 70vw; /* Adjusted grid width */
-    }
-}
-
-/* For tablets (up to 768px) */
-@media (max-width: 768px) {
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 images per row on tablets */
+        grid-template-columns: repeat(1, 1fr); /* 2 images per row on tablets */
         gap: 5px; /* Slightly increased gap */
-        width: 90vw; /* Adjusted grid width */
-        line-height: 1.2;
+        width: 80vw; /* Adjusted grid width */
     }
-}
 
-/* For mobile devices (up to 480px) */
-@media (max-width: 480px) {
-    .image-grid {
-        grid-template-columns: 1fr; /* 1 image per row on mobile */
-        gap: 3px; /* Reduced gap for smaller screens */
-        width: 95vw; /* Almost full-width */
+    .grid-image {
+        margin-right: 0;
+        width: 400px;
+        height: auto;
+       margin-bottom: 0;
     }
-}
 
-/* For larger screens (above 1200px) */
-@media (min-width: 1200px) {
-    .carousel-btn {
-        padding: 12px; /* Slightly larger buttons */
-        font-size: 20px; /* Increased font size */
-        margin-top: 40px;
-    }
-}
-
-/* For tablets (up to 768px) */
-@media (max-width: 768px) {
     .carousel-btn {
         padding: 8px; /* Slightly smaller buttons */
         font-size: 16px; /* Reduced font size */
@@ -591,10 +422,73 @@ body, html {
     .carousel-btn.right {
         right: 10px;
     }
+
+    .carousel {
+        height: 40vh; /* Slightly smaller height on small screens */
+    }
+    .card-container {
+        margin-left: 100px;
+        margin-top:150px;
+    }
+    .card {
+        margin-left: -80px;
+    }
+
+    .image-caption-below {
+        margin-top: 8px;
+        font-size: 1rem;
+        color: #333;
+        text-align: center;
+        font-weight: bold;
+        margin-left: -400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel {
+        height: 40vh; /* Smaller height for very small devices */
+    }
+
+    .carousel-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .title {
+        font-size: 18px; /* Smallest size for mobile devices */
+        text-align: center; /* Always centered on small screens */
+        top: -10px;
+    }
+
+    .title-overlay {
+        left: 20px; /* Minimal horizontal offset for very small screens */
+    }
+
+    .section-title {
+        font-size: 16px;
+        padding-top: 15px; /* Minimal padding for mobile devices */
+    }
+
+    .image-caption-hover {
+        font-size: 0.6rem; /* Smallest font size for mobile */
+        padding: 4px; /* Minimal padding for mobile devices */
+        line-height: 0.8; /* Tighter line height for compactness */
+    }
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* For mobile devices (up to 480px) */
 @media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 image per row on mobile */
+        gap: 3px; /* Reduced gap for smaller screens */
+        width: 95vw; /* Almost full-width */
+    }
+
     .carousel-btn {
         padding: 6px; /* Smaller buttons for mobile */
         font-size: 14px; /* Further reduced font size */
@@ -609,4 +503,3 @@ body, html {
         right: 10px;
     }
 }
-

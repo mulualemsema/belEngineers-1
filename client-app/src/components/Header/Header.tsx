@@ -38,7 +38,13 @@ const Header: React.FC = () => {
             <div className="header-container">
                 <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                     <div className="logo-container">
-                        <img src="/logo.png" alt="Logo" className="logo-image"/>
+                        <img src="/logo.png"
+                             srcSet="/logo.png 768w,
+                             /logo.png 1200w,
+                             /logo.png 480w,
+                             /logo.png 320w"
+                             alt="Logo" className="logo-image"
+                        />
                         <h3 className="Bel-name">BEL Engineers LLC</h3>
                     </div>
                     <button className="menu-toggle" onClick={toggleMenu}>

@@ -74,7 +74,7 @@
     font-family: 'Arial', sans-serif;
 }
 
-.name-founder p {
+.name-founder {
     font-family: 'Arial', sans-serif;
 }
 
@@ -89,6 +89,10 @@
 
 .bel-founder p {
     color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.container h2 {
     font-family: 'Arial', sans-serif;
 }
 
@@ -114,6 +118,29 @@
     .member p {
         margin-top: 80px;
     }
+
+    .container {
+        max-width: 800px;
+        padding: 20px;
+        color: #333;
+        margin-top: 60px;
+        margin-left: 5%;
+    }
+
+    .container h2 {
+        font-family: 'Arial', sans-serif;
+        font-size: 20px;
+    }
+
+    .member p {
+        margin-top: 80px;
+        font-size: 16px;
+    }
+
+    .name-founder {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
+    }
 }
 
 /* Mobile Screens */
@@ -137,5 +164,28 @@
     .team h3 {
         font-size: 1.3rem;
         font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        padding: 20px;
+        color: #333;
+        margin-top: 60px;
+        margin-left: 5%;
+    }
+
+    .container h2 {
+        font-family: 'Arial', sans-serif;
+        font-size: 20px;
+    }
+
+    .member p {
+        margin-top: 80px;
+        font-size: 16px;
+    }
+
+    .name-founder {
+        font-family: 'Arial', sans-serif;
+        font-size: 16px;
     }
 }

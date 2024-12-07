@@ -9,10 +9,18 @@
     margin-bottom: 10px;
 }
 
+.image-container {
+    padding: 0 15px; /* Less padding on smaller screens */
+    margin-top: 190px;
+    margin-bottom: 150px;
+}
+
 /* Optional: Add some responsiveness for smaller screens */
 @media (max-width: 768px) {
     .image-container {
         padding: 0 10px; /* Less padding on smaller screens */
+        margin-top: 190px;
+        margin-bottom: 150px;
     }
 
     .centered-image.zoomed {
@@ -23,5 +31,11 @@
 @media (max-width: 480px) {
     .centered-image.zoomed {
         transform: scale(1.2); /* Even less zoom on very small screens */
+    }
+
+    .image-container {
+        padding: 0 10px; /* Less padding on smaller screens */
+        margin-top: 170px;
+        margin-bottom: 130px;
     }
 }
