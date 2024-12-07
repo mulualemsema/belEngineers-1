@@ -3,6 +3,7 @@
     margin: auto;
     padding: 20px;
     margin-top: 100px;
+    overflow-x: auto; /* Enable horizontal scrolling if table overflows */
 }
 
 .messageTable {
@@ -26,8 +27,20 @@
 .messageTable td {
     text-align: left;
     vertical-align: top;
+    word-wrap: break-word; /* Ensures long text breaks into multiple lines */
 }
 
+/* Wrapper for table to handle smaller screens */
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    border: 1px solid #ccc; /* Optional: Add border for better distinction */
+    margin-top: 20px;
+}
+
+/* Pagination and Controls */
 .controls {
     margin: 20px 0;
     display: flex;
@@ -77,9 +90,11 @@
 }
 
 /* Responsive Styles */
+
+/* Large screens (1200px and below) */
 @media (max-width: 1200px) {
     .viewMessageContainer {
-        width: 90%; /* Make the container slightly narrower on larger tablets and below */
+        width: 90%; /* Make the container slightly narrower */
     }
 
     .itemsPerPageSelect {
@@ -87,14 +102,15 @@
     }
 }
 
-@media (max-width: 768px) {
+/* Medium screens (992px and below) */
+@media (max-width: 992px) {
     .viewMessageContainer {
-        width: 80%; /* Reduce container width on medium screens */
-        padding: 15px;
+        width: 95%; /* Use most of the available width */
     }
 
     .messageTable th, .messageTable td {
         padding: 10px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Adjust font size */
     }
 
     .controls {
@@ -103,12 +119,20 @@
     }
 
     .itemsPerPageSelect {
-        width: 100%; /* Make the select input full-width on smaller screens */
+        width: 100%; /* Make the select input full-width */
         margin-top: 10px;
+    }
+}
+
+/* Small screens (768px and below) */
+@media (max-width: 768px) {
+    .messageTable th, .messageTable td {
+        padding: 8px; /* Reduce padding further */
+        font-size: 13px; /* Adjust font size for smaller devices */
     }
 
     .pagination {
-        font-size: 14px; /* Smaller font for pagination on small screens */
+        font-size: 14px; /* Smaller font size for pagination */
     }
 
     .pageButton {
@@ -116,21 +140,54 @@
     }
 }
 
-@media (max-width: 480px) {
-    .viewMessageContainer {
-        width: 80%; /* Full width on small screens */
-        padding: 10px;
-    }
-
+/* Extra Small screens (576px and below) */
+@media (max-width: 576px) {
     .messageTable th, .messageTable td {
-        padding: 8px; /* Even smaller padding for very small screens */
+        padding: 6px; /* Minimal padding for very small screens */
+        font-size: 12px; /* Reduce font size */
     }
 
     .pagination {
-        font-size: 12px; /* Adjust font size for very small screens */
+        font-size: 12px; /* Adjust font size for smaller devices */
     }
 
     .pageButton {
-        padding: 5px 8px; /* Even smaller padding for pagination buttons */
+        padding: 5px 8px; /* Smaller padding for buttons */
+    }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .viewMessageContainer {
+        width: 100%; /* Full width on small screens */
+        padding: 10px;
+    }
+
+    .messageTable {
+        font-size: 12px; /* Smaller font size for table content */
+    }
+
+    .messageTable th, .messageTable td {
+        padding: 4px; /* Minimal padding for table cells */
+    }
+
+    .pagination {
+        font-size: 10px; /* Reduce font size further for pagination */
+    }
+
+    .pageButton {
+        padding: 4px 6px; /* Minimal padding for buttons */
+    }
+}
+
+/* For very small screens (320px and below) */
+@media (max-width: 320px) {
+    .messageTable th, .messageTable td {
+        font-size: 10px; /* Tiny font for very small devices */
+        padding: 3px; /* Minimal padding */
+    }
+
+    .pageButton {
+        padding: 3px 5px; /* Tiny buttons */
     }
 }

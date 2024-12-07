@@ -124,7 +124,7 @@
 @media (max-width: 768px) {
     .certification-container {
         margin-top: 80px;
-        margin-left: auto;
+        margin-left: -40px;
     }
 
     .certification-heading {
@@ -132,7 +132,8 @@
     }
 
     .certification-paragraph {
-        font-size: 1rem;
+        font-size: .9rem;
+        width: 600px;
     }
 
     .certification-content {
