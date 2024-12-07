@@ -6,7 +6,7 @@ body {
     width: 100%; /* Ensures the body spans the full viewport width */
     min-height: 100vh; /* Makes the body span at least the full viewport height */
     overflow-x: hidden; /* Prevents horizontal scrolling */
-    background-color: red; /* Optional: Set a background color */
+    background-color: #f5f5f5; /* Optional: Set a background color */
 }
 /* Top strip styles */
 .top-strip {

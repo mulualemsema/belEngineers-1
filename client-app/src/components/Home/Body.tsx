@@ -20,6 +20,7 @@ const Body = () => {
                 'Hydrology Design',
                 'Roadway Hydraulic Design',
                 'Bridge Hydraulic Design',
+                'Roadway PS&E'
         ];
 
         const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -110,15 +111,6 @@ const Body = () => {
                         list1: 'Designed intersection improvements at IH 35/SH 80 to reduce traffic congestion.',
                         list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
                         list3: ''
-                },
-                {
-                        id: 6,
-                        src: imageSH82IH35,
-                        title: ' Roadway PS&E',
-                        body: 'Developing complete Plans, Specifications, and Estimates (PS&E) for roadway projects, including geometric design, traffic control plans, drainage, and cost estimating. Skilled in ensuring compliance with federal, state, and local standards while coordinating with multidisciplinary teams. Experienced in producing accurate, detailed deliverables that meet client and regulatory expectations.',
-                        list1: 'placeholder1',
-                        list2: 'placeholder2',
-                        list3: 'placeholder3'
                 }
         ];
 
