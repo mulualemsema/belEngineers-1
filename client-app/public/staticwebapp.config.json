@@ -33,6 +33,10 @@
       "rewrite": "/index.html"
     },
     {
+      "route": "/view-message",
+      "rewrite": "/index.html"
+    },
+    {
       "route": "/{*.}",
       "rewrite": "/index.html"
     }

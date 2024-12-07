@@ -15,8 +15,8 @@ const safetyPractices: SafetyPractice[] = [
     },
     {
         title: "Environmental Considerations",
-        description: "Stabilize slopes, manage runoff, and use vegetation or geotextiles. Prevent " +
-            "pollution with sediment traps and filtration, and include wildlife crossings to reduce habitat disruption"
+        description: "Stabilize slopes, manage runoff, and use vegetation or geo textiles. Prevent " +
+            "pollution with sediment traps and filtration, and include wildlife crossings to reduce habitat disruption."
     },
     {
         title: "Regular Inspections",
