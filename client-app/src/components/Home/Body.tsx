@@ -15,7 +15,7 @@ const Body = () => {
         const navigate = useNavigate();
 
         const titles = [
-                'Designing the Future Infrastructure',
+                'Designing the Future',
                 'Roadway Design',
                 'Hydrology Design',
                 'Roadway Hydraulic Design',
