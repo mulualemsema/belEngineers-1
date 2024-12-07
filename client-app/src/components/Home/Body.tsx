@@ -66,6 +66,24 @@ const Body = () => {
 
         const imagesMiddle = [
                 {
+                        id: 4,
+                        src: imageSH82IH35,
+                        title: 'DLT Intersection Improvement',
+                        body: 'IH 35 at SL 82 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
+                        list1: 'Designed intersection improvements at IH 35/SH 82 to reduce traffic congestion.',
+                        list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
+                        list3: ''
+                },
+                {
+                        id: 5,
+                        src: imageSH80IH35,
+                        title: 'DLT Intersection Improvement',
+                        body: 'IH 35 at SL 80 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
+                        list1: 'Designed intersection improvements at IH 35/SH 80 to reduce traffic congestion.',
+                        list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
+                        list3: ''
+                },
+                {
                         id: 1,
                         src: imageFM112,
                         title: 'BCCulvert Replacement',
@@ -93,24 +111,6 @@ const Body = () => {
                         list1: 'Designed about 6-mile roadway widening  project, including the addition of a center turn lane and shoulders.',
                         list2: 'Conducted hydrological and hydraulic analyses, designing 24 cross-drainage structures to enhance stormwater management.',
                         list3: 'Developed a comprehensive traffic control plan to minimize disruptions during construction '
-                },
-                {
-                        id: 4,
-                        src: imageSH82IH35,
-                        title: 'DLT Intersection Improvement',
-                        body: 'IH 35 at SL 82 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
-                        list1: 'Designed intersection improvements at IH 35/SH 82 to reduce traffic congestion.',
-                        list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
-                        list3: ''
-                },
-                {
-                        id: 5,
-                        src: imageSH80IH35,
-                        title: 'DLT Intersection Improvement',
-                        body: 'IH 35 at SL 80 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
-                        list1: 'Designed intersection improvements at IH 35/SH 80 to reduce traffic congestion.',
-                        list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
-                        list3: ''
                 }
         ];
 
