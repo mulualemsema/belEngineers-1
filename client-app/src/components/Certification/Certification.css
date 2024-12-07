@@ -82,7 +82,7 @@
 .txdot-list li {
     margin-bottom: 8px;
     text-indent: 10px;
-    width: 500px;
+    width: 450px;
     justify-content: left;
 }
 
@@ -106,7 +106,7 @@
     .txdot-list li {
         margin-bottom: 8px;
         text-indent: 10px;
-        width: 400px;
+        width: 450px;
         justify-content: left;
     }
 
@@ -218,7 +218,7 @@
         margin-bottom: 8px;
         text-indent: 10px;
         justify-content: left;
-        overflow-wrap: break-word;
+        width: auto;
     }
 
     .certification-paragraph {

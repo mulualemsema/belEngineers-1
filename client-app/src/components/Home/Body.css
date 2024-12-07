@@ -71,6 +71,7 @@ body, html {
     padding-top: 2px; /* Add top padding to leave space at the top */
 }
 
+
 /* Keyframe animation for zoom effect */
 @keyframes zoomIn {
     0% {
@@ -160,7 +161,7 @@ body, html {
 
 .title-overlay {
     position: absolute;
-    top: -60px;
+    top: -200px;
     left: 120px;
     width: 100%;
     height: 100%;
