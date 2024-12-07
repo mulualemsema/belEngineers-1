@@ -1,9 +1,18 @@
+
+body {
+    margin: 0; /* Remove default browser margins */
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    width: 100%; /* Ensures the body spans the full viewport width */
+    min-height: 100vh; /* Makes the body span at least the full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    background-color: red; /* Optional: Set a background color */
+}
 /* Top strip styles */
 .top-strip {
     display: flex;
     justify-content: flex-end; /* Aligns content to the right */
     align-items: center;
-    padding: 5px 20px; /* Adds padding to the strip */
     background-color: #333; /* Blue background for the strip */
     color: white; /* White text for contrast */
     font-size: 14px;
@@ -12,16 +21,17 @@
     top: 0;
     z-index: 1001; /* Ensures it stays above the header */
     border-bottom: 1px solid #d3d3d3; /* Light grey bottom border */
+    margin: 0;
+    padding: 0;
+
 }
 
 .phone-icon {
-    margin-right: 5px;
     font-size: 16px;
 }
 
 .phone-number {
     font-weight: bold;
-    margin-right: 45px;
 }
 
 /* General styling */
@@ -29,15 +39,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
     position: fixed; /* Fixed position to make the header always stay at the top */
     top: 0; /* Adjust top positioning to account for the height of the top strip */
     width: 100%; /* Make the header span the full width of the page */
     z-index: 1000;
     font-size: 18px;
     background-color: #B2F7EF;
-    margin-left: -20px;
 }
 
 .logo-image {

@@ -35,7 +35,7 @@ const Header: React.FC = () => {
                 <span className="phone-number">(512) 363-0461</span>
             </div>
 
-            <div className="header-container">
+            <div className="home-container">
                 <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                     <div className="logo-container">
                         <img src="/logo.png"
