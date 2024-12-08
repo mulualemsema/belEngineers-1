@@ -25,7 +25,8 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2px;
+    margin: 0; /* Remove default browser margins */
+    padding: 0;
 }
 
 .carousel-image {
@@ -33,8 +34,7 @@ body, html {
     height: 75%;
     object-fit: cover;
     animation: zoomIn 14s infinite;
-    margin-bottom: 0;
-    margin-top: 20px;
+    margin: 20px 0 0;
 }
 
 .carousel-btn {
@@ -69,6 +69,8 @@ body, html {
     color: #333;
     text-align: center;
     padding-top: 2px; /* Add top padding to leave space at the top */
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
@@ -442,7 +444,6 @@ body, html {
         font-size: 14px;
     }
     .carousel-btn {
-        padding: 10px;
         font-size: 14px;
     }
 
@@ -489,8 +490,7 @@ body, html {
     }
 
     .carousel-btn {
-        padding: 6px;
-        font-size: 12px;
+        font-size: 14px;
     }
     .carousel-btn {
         padding: 8px;
@@ -510,6 +510,8 @@ body, html {
         color: #333;
         text-align: center;
         padding-top: 2px; /* Add top padding to leave space at the top */
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 
@@ -522,19 +524,10 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -150px;
-        margin-left: -100px;
     }
 
     .image-title {
         font-size: 16px; /* Smaller title */
-    }
-
-    .title {
-        font-size: 24px;
-    }
-
-    .carousel {
-        height: 40vh;
     }
 
     .carousel-image {
@@ -546,7 +539,7 @@ body, html {
         font-size: 10px;
     }
     .carousel-btn {
-        padding: 6px;
+        padding: 5px;
         font-size: 10px;
     }
 
@@ -575,7 +568,6 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -150px;
-        margin-left: -100px;
     }
 
     .grid-image {
@@ -597,33 +589,5 @@ body, html {
 
     .carousel {
         height: 40vh;
-    }
-
-    .carousel-image {
-        width: 100%;
-    }
-
-    .carousel-btn {
-        padding: 5px;
-        font-size: 10px;
-    }
-    .carousel-btn {
-        padding: 6px;
-        font-size: 10px;
-    }
-
-    .carousel-btn.left {
-        left: 10px; /* Close to edge for small screens */
-    }
-
-    .carousel-btn.right {
-        right: 10px; /* Close to edge for small screens */
-    }
-    .section-title {
-        margin-top: 10px;
-        font-size: 20px;
-        color: #333;
-        text-align: center;
-        padding-top: 2px; /* Add top padding to leave space at the top */
     }
 }

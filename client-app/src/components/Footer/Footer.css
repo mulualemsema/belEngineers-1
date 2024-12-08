@@ -16,6 +16,8 @@ body, html {
     flex-direction: column; /* Stack items for better control */
     align-items: center;
     text-align: center;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .footer-content {
@@ -89,7 +91,6 @@ body, html {
 
     .contact-info, .footer-year, .social-icons {
         text-align: center;
-        margin: 10px 0;
     }
 
     .footer-logo {
