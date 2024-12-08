@@ -49,7 +49,6 @@ body {
 }
 
 .logo-image {
-    padding: 5px;
     width: 20%;
     height: 20%;
     border-radius: 80%; /* Create avatar form */
@@ -60,9 +59,10 @@ body {
     display: none;
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
     color: blue;
+    margin-top: 30px;
 }
 
 .nav {
@@ -74,12 +74,11 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    margin: 5px;
     padding: 5px;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 20px;
 }
 
@@ -116,10 +115,6 @@ body {
 .nav-links a.active {
     color: red;
     font-weight: bold;
-}
-
-.Bel-name h3 {
-    margin-left: -20px;
 }
 
 .logo-container {
@@ -182,7 +177,7 @@ body {
 
     .menu-toggle {
         display: block;
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .header.scrolled .menu-toggle {
@@ -193,7 +188,6 @@ body {
     .top-strip {
         justify-content: center; /* Center align content on smaller screens */
         font-size: 16px; /* Reduce font size */
-        padding: 5px 10px;
     }
 
     .phone-number {
@@ -221,7 +215,7 @@ body {
     }
 
     .menu-toggle {
-        font-size: 18px; /* Slightly smaller icon for mobile */
+        font-size: 16px; /* Slightly smaller icon for mobile */
         color: blue;
         cursor: pointer;
         right: 10px; /* Adjust as needed */
@@ -255,7 +249,7 @@ body {
     }
 
     .menu-toggle {
-        font-size: 18px; /* Larger font for better visibility */
+        font-size: 16px; /* Larger font for better visibility */
         color: darkblue; /* Adjusted color for contrast */
     }
 
@@ -278,11 +272,12 @@ body {
     }
 
     .menu-toggle {
-        font-size: 18px; /* Slightly smaller icon for mobile */
+        font-size: 16px; /* Slightly smaller icon for mobile */
         color: blue;
         cursor: pointer;
         right: 10px; /* Adjust as needed */
         z-index: 10; /* Ensure visibility above other elements */
+        margin-top: auto;
     }
 
     body {

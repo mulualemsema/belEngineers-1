@@ -22,6 +22,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
     gap: 20px; /* Space between cards */
     margin-top: 15px;
+    padding: 5px;
 }
 
 /* Card styling */
@@ -30,6 +31,7 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
+    margin-left: -10px;
 }
 
 .safetyCard:hover {
@@ -42,6 +44,9 @@
     font-size: 20px;
     color: #333;
     font-family: 'Arial', sans-serif;
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: -10px;
 }
 
 /* Description in card */
@@ -49,6 +54,10 @@
     font-size: 16px;
     color: #555;
     line-height: 1.5;
+    padding: 20px;
+    margin-right: 10px;
+    margin-left: -10px;
+
 }
 
 /* Responsive Design */
@@ -62,6 +71,8 @@
 
     .safetyGrid {
         gap: 5px; /* Reduce spacing between cards */
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+        margin-left: -20px;
     }
 
     .safetyCard {
