@@ -8,7 +8,6 @@ body {
     overflow-x: hidden; /* Prevents horizontal scrolling */
     background-color: #f5f5f5; /* Optional: Set a background color */
 }
-
 /* Top strip styles */
 .top-strip {
     display: flex;
@@ -73,19 +72,31 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    padding: 5px;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
+    justify-content: space-between;
+    position: relative;
+    padding: 0;
+}
+.nav-links li a {
+    justify-content: space-between;
     margin-left: 30px;
-    margin-top: 20px;
 }
 
+.nav.open {
+    display: block;
+}
 /* Blue color for specific links */
 .nav-links a[href="/"],
 .nav-links a[href="/aboutUs"],
@@ -95,6 +106,7 @@ body {
 .nav-links a[href="/safety"] {
     color: blue; /* Highlighted links */
     font-weight: bold;
+    justify-content: space-between;
 }
 
 .nav-links a[href="/admin"] {
@@ -114,6 +126,7 @@ body {
     color: #333;
     font-weight: 500;
     transition: color 0.3s ease;
+    justify-content: space-between;
 }
 
 .nav-links a.active {
@@ -150,6 +163,7 @@ body {
 
     .nav-links li {
         padding: 5px;
+        margin-top: 20px;
 
     }
 
@@ -215,7 +229,7 @@ body {
         width: 100%; /* Full-width navigation */
         background-color: rgba(255, 255, 255, 0.5); /* 40% opacity white */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        top: 20px; /* Adjust based on your header height */
+        margin-top: 20px; /* Adjust based on your header height */
         padding: 5px 0; /* Add some padding */
         justify-content: center;
         right: 25vw;
