@@ -11,12 +11,11 @@ const ImageView = () => {
     const { id } = useParams<{ id: string }>();
 
     const imagesMiddle = [
-        { id: 1, src: imageFM112, title: 'BCCulvert Replacement' },
-        { id: 2, src: imageSH95, title: 'Bridge Replacement' },
-        { id: 3, src: imageRM3238, title: 'Road Widening Project' },
-        { id: 4, src: imageSH80IH35, title: 'DLT Intersection Improvement' },
-        { id: 4, src: imageSH82IH35, title: 'DLT Intersection Improvement' },
-        { id: 4, src: imageSH82IH35, title: ' Roadway PS&E' },
+        { id: 1, src: imageSH80IH35, title: 'DLT Intersection Improvement' },
+        { id: 2, src: imageSH82IH35, title: 'DLT Intersection Improvement' },
+        { id: 3, src: imageFM112, title: 'BCCulvert Replacement' },
+        { id: 4, src: imageSH95, title: 'Bridge Replacement' },
+        { id: 5, src: imageRM3238, title: 'Road Widening Project' },
     ];
 
     const image = imagesMiddle.find((img) => img.id === parseInt(id || '', 10));

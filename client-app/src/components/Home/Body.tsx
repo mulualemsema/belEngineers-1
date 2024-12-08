@@ -66,7 +66,7 @@ const Body = () => {
 
         const imagesMiddle = [
                 {
-                        id: 4,
+                        id: 1,
                         src: imageSH82IH35,
                         title: 'DLT Intersection Improvement',
                         body: 'IH 35 at SL 82 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
@@ -75,7 +75,7 @@ const Body = () => {
                         list3: ''
                 },
                 {
-                        id: 5,
+                        id: 2,
                         src: imageSH80IH35,
                         title: 'DLT Intersection Improvement',
                         body: 'IH 35 at SL 80 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
@@ -84,7 +84,7 @@ const Body = () => {
                         list3: ''
                 },
                 {
-                        id: 1,
+                        id: 3,
                         src: imageFM112,
                         title: 'BCCulvert Replacement',
                         body: 'FM 112 Roadway & Bridge-Class Culvert\n' +
@@ -94,7 +94,7 @@ const Body = () => {
                         list3: 'Created phased construction schedules.'
                 },
                 {
-                        id: 2,
+                        id: 4,
                         src: imageSH95,
                         title: 'Bridge Replacement' ,
                         body: 'SH 95 at Willis Creek Bridge Replacement (Designed - 2015) Williamson County, TX',
@@ -103,7 +103,7 @@ const Body = () => {
                         list3: 'Conducted hydrological and hydraulic analyses, designed roadway geometry, and developed phased construction schedules.'
                 },
                 {
-                        id: 3,
+                        id: 5,
 
                         src: imageRM3238,
                         title: 'Road Widening Project',

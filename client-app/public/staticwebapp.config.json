@@ -29,7 +29,23 @@
       "rewrite": "/index.html"
     },
     {
-      "route": "/images/:id",
+      "route": "/images/1",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/images/2",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/images/3",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/images/4",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/images/5",
       "rewrite": "/index.html"
     },
     {
