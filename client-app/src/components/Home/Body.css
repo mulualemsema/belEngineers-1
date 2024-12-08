@@ -360,7 +360,9 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 48px; /* Adjusted font size */
+        font-size: 48px; /* Smallest font for small devices */
+        margin-top: -150px;
+        margin-left: -80px;
     }
 
     .title {
@@ -417,7 +419,9 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 36px; /* Smaller font for tablets */
+        font-size: 36px; /* Smallest font for small devices */
+        margin-top: -150px;
+        margin-left: -80px;
     }
 
     .image-body {
@@ -470,11 +474,12 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 28px; /* Smaller font for phones */
+        font-size: 20px; /* Smallest font for small devices */
+        margin-top: -150px;
+        margin-left: -80px;
     }
-
     .grid-image {
-        width: 100%; /* Full width images */
+        width: 95%; /* Full width images */
     }
 
     .title {
@@ -513,6 +518,11 @@ body, html {
         margin-right: 0;
         margin-left: 0;
     }
+    .title-overlay h1 {
+        font-size: 24px; /* Smallest font for small devices */
+        margin-top: -150px;
+        margin-left: -80px;
+    }
 }
 
 /* Very small screens (480px and above) */
@@ -524,6 +534,7 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -150px;
+        margin-left: -80px;
     }
 
     .image-title {
@@ -531,7 +542,7 @@ body, html {
     }
 
     .carousel-image {
-        width: 100%;
+        width: 95%;
     }
 
     .carousel-btn {
@@ -568,10 +579,11 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -150px;
+        margin-left: -80px;
     }
 
     .grid-image {
-        width: 100%; /* Full width images */
+        width: 95%; /* Full width images */
     }
     .image-body {
         font-size: 12px; /* Smaller body text */

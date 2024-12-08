@@ -140,7 +140,7 @@ const Body = () => {
                                     <FaChevronRight/>
                             </button>
                     </div>
-                    <h2 className="section-title">Some of the founder's Previous Experience</h2>
+                    <h2 className="section-title">Some of the Founder's Previous Experience</h2>
 
                     <div className="image-grid">
                             {imagesMiddle.map((image) => (
