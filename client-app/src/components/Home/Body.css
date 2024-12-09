@@ -96,29 +96,26 @@ body, html {
 /* Card container styles */
 .card-container {
     display: flex;
-    justify-content: center; /* Center the cards horizontally */
     gap: 20px; /* Space between the cards */
-    padding: 0 140px; /* Adds space from the left and right of the viewport */
     margin-top: 20px;
-    margin-left: 50px;
-    max-width: 1200px; /* Optional: Limits the container width for better design */
+    margin-bottom: 20px;
     flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    align-items: center;
+    align-content: center;
 }
 
 /* Individual card styles */
 .card {
     flex: 1; /* Allows cards to be flexible */
-    max-width: 33%; /* Controls the maximum width of each card */
-    min-width: 280px; /* Prevents the card from shrinking too much */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #b3d9ff;
+    align-items: center;
 }
 
 .card:hover {
@@ -347,6 +344,15 @@ body, html {
         text-align: center;
         padding-top: 2px; /* Add top padding to leave space at the top */
     }
+    .card-container {
+        display: flex;
+        justify-content: center; /* Center the cards horizontally */
+        gap: 20px; /* Space between the cards */
+        margin-top: 20px;
+        margin-left: 50px;
+        max-width: 1200px; /* Optional: Limits the container width for better design */
+        flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
+    }
 }
 
 /* Medium screens (992px and above) */
@@ -520,7 +526,7 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -150px;
-        margin-left: -80px;
+        margin-left: -50px;
     }
 }
 
@@ -528,13 +534,13 @@ body, html {
 @media (max-width: 575px) and (min-width: 480px) {
     .image-grid {
         grid-template-columns: 1fr; /* Single column */
-        gap: 20px;
+        gap: 15px;
     }
 
     .title-overlay h1 {
-        font-size: 24px; /* Smallest font for small devices */
-        margin-top: -150px;
-        margin-left: -80px;
+        font-size: 22px; /* Smallest font for small devices */
+        margin-top: -100px;
+        margin-left: -50px;
     }
 
     .image-title {
@@ -542,7 +548,7 @@ body, html {
     }
 
     .carousel-image {
-        width: 95%;
+        width: 92%;
     }
 
     .carousel-btn {
@@ -551,36 +557,34 @@ body, html {
     }
     .carousel-btn {
         padding: 5px;
-        font-size: 10px;
+        font-size: 20px;
     }
 
     .carousel-btn.left {
-        left: 10px; /* Close to edge for small screens */
+        left: 20px; /* Close to edge for small screens */
     }
 
     .carousel-btn.right {
-        right: 10px; /* Close to edge for small screens */
+        right: 20px; /* Close to edge for small screens */
     }
     .section-title {
-        margin-top: 10px;
+        margin-top: 5px;
         font-size: 20px;
         color: #333;
         text-align: center;
-        padding-top: 2px; /* Add top padding to leave space at the top */
     }
 }
 
-/* Mobile screens (320px and above) */
-@media (max-width: 479px) {
+@media (max-width: 480px) {
     .image-grid {
         grid-template-columns: 1fr; /* Single column */
         gap: 15px;
     }
 
     .title-overlay h1 {
-        font-size: 24px; /* Smallest font for small devices */
-        margin-top: -150px;
-        margin-left: -80px;
+        font-size: 22px; /* Smallest font for small devices */
+        margin-top: -100px;
+        margin-left: -50px;
     }
 
     .grid-image {
@@ -602,6 +606,33 @@ body, html {
 
     .carousel {
         height: 40vh;
+    }
+
+    .carousel-image {
+        width: 92%;
+    }
+
+    .carousel-btn {
+        padding: 5px;
+        font-size: 10px;
+    }
+    .carousel-btn {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .carousel-btn.left {
+        left: 20px; /* Close to edge for small screens */
+    }
+
+    .carousel-btn.right {
+        right: 20px; /* Close to edge for small screens */
+    }
+    .section-title {
+        margin-top: 5px;
+        font-size: 20px;
+        color: #333;
+        text-align: center;
     }
 }
 
@@ -613,16 +644,16 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 24px; /* Smallest font for small devices */
-        margin-top: -150px;
-        margin-left: -80px;
+        font-size: 20px; /* Smallest font for small devices */
+        margin-top: -100px;
+        margin-left: -50px;
     }
 
     .grid-image {
-        width: 95%; /* Full width images */
+        width: 92%; /* Full width images */
     }
     .image-body {
-        font-size: 12px; /* Smaller body text */
+        font-size: 10px; /* Smaller body text */
     }
     .image-list li {
         font-size: 10px; /* Smaller list items */
@@ -637,5 +668,32 @@ body, html {
 
     .carousel {
         height: 40vh;
+    }
+
+    .carousel-image {
+        width: 92%;
+    }
+
+    .carousel-btn {
+        padding: 5px;
+        font-size: 10px;
+    }
+    .carousel-btn {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .carousel-btn.left {
+        left: 20px; /* Close to edge for small screens */
+    }
+
+    .carousel-btn.right {
+        right: 20px; /* Close to edge for small screens */
+    }
+    .section-title {
+        margin-top: 5px;
+        font-size: 20px;
+        color: #333;
+        text-align: center;
     }
 }
