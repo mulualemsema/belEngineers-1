@@ -80,13 +80,13 @@ body, html {
         transform: scale(1);
     }
     100% {
-        transform: scale(1.1); /* Slight zoom in */
+        transform: scale(1.0); /* Slight zoom in */
     }
 }
 
 @keyframes zoomOut {
     0% {
-        transform: scale(1.1); /* Starting slightly zoomed in */
+        transform: scale(1.0); /* Starting slightly zoomed in */
     }
     100% {
         transform: scale(1); /* Zooming out to normal size */
@@ -197,15 +197,6 @@ body, html {
     position: relative;
 }
 
-
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 16px;
-}
-
 .image-container {
     position: relative;
     cursor: pointer;
@@ -239,6 +230,8 @@ body, html {
 
 .image-container:hover .image-overlay {
     opacity: 1;
+    width: 85%;
+    height: 85%;
 }
 
 .image-overlay p {
@@ -252,7 +245,7 @@ body, html {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 40px;
     padding: 16px;
 }
 
@@ -292,6 +285,8 @@ body, html {
 
 .image-container:hover .image-overlay {
     opacity: 1;
+    width: 85%;
+    height: 85%;
 }
 
 .image-body {
@@ -327,6 +322,7 @@ body, html {
 @media (min-width: 1200px) {
     .image-grid {
         grid-template-columns: repeat(3, 1fr); /* Three columns */
+        gap: 40px;
     }
 
     .title-overlay h1 {
@@ -357,6 +353,7 @@ body, html {
 @media (max-width: 1199px) and (min-width: 992px) {
     .image-grid {
         grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 30px;
     }
 
     .title-overlay h1 {
@@ -416,6 +413,7 @@ body, html {
 @media (max-width: 991px) and (min-width: 768px) {
     .image-grid {
         grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px;
     }
 
     .title-overlay h1 {
@@ -471,6 +469,7 @@ body, html {
 @media (max-width: 767px) and (min-width: 576px) {
     .image-grid {
         grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 20px;
     }
 
     .title-overlay h1 {
@@ -529,6 +528,7 @@ body, html {
 @media (max-width: 575px) and (min-width: 480px) {
     .image-grid {
         grid-template-columns: 1fr; /* Single column */
+        gap: 20px;
     }
 
     .title-overlay h1 {
@@ -574,6 +574,7 @@ body, html {
 @media (max-width: 479px) {
     .image-grid {
         grid-template-columns: 1fr; /* Single column */
+        gap: 15px;
     }
 
     .title-overlay h1 {
