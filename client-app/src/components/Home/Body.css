@@ -536,7 +536,7 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -100px;
-        margin-left: -50px;
+        margin-left: -80px;
     }
 
     .image-title {
@@ -580,7 +580,7 @@ body, html {
     .title-overlay h1 {
         font-size: 24px; /* Smallest font for small devices */
         margin-top: -100px;
-        margin-left: -50px;
+        margin-left: -80px;
     }
 
     .grid-image {
@@ -642,7 +642,7 @@ body, html {
     .title-overlay h1 {
         font-size: 22px; /* Smallest font for small devices */
         margin-top: -100px;
-        margin-left: -50px;
+        margin-left: -80px;
     }
 
     .grid-image {
