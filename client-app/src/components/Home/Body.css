@@ -96,26 +96,29 @@ body, html {
 /* Card container styles */
 .card-container {
     display: flex;
+    justify-content: center; /* Center the cards horizontally */
     gap: 20px; /* Space between the cards */
+    padding: 0 140px; /* Adds space from the left and right of the viewport */
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 50px;
+    max-width: 1200px; /* Optional: Limits the container width for better design */
     flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
-    align-items: center;
-    align-content: center;
 }
 
 /* Individual card styles */
 .card {
     flex: 1; /* Allows cards to be flexible */
+    max-width: 33%; /* Controls the maximum width of each card */
+    min-width: 280px; /* Prevents the card from shrinking too much */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #b3d9ff;
-    align-items: center;
 }
 
 .card:hover {
@@ -344,15 +347,6 @@ body, html {
         text-align: center;
         padding-top: 2px; /* Add top padding to leave space at the top */
     }
-    .card-container {
-        display: flex;
-        justify-content: center; /* Center the cards horizontally */
-        gap: 20px; /* Space between the cards */
-        margin-top: 20px;
-        margin-left: 50px;
-        max-width: 1200px; /* Optional: Limits the container width for better design */
-        flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
-    }
 }
 
 /* Medium screens (992px and above) */
@@ -524,7 +518,7 @@ body, html {
         margin-left: 0;
     }
     .title-overlay h1 {
-        font-size: 24px; /* Smallest font for small devices */
+        font-size: 30px; /* Smallest font for small devices */
         margin-top: -150px;
         margin-left: -50px;
     }
@@ -538,7 +532,7 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 22px; /* Smallest font for small devices */
+        font-size: 30px; /* Smallest font for small devices */
         margin-top: -100px;
         margin-left: -50px;
     }
@@ -582,7 +576,7 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 22px; /* Smallest font for small devices */
+        font-size: 28px; /* Smallest font for small devices */
         margin-top: -100px;
         margin-left: -50px;
     }
@@ -644,16 +638,16 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 20px; /* Smallest font for small devices */
+        font-size: 26px; /* Smallest font for small devices */
         margin-top: -100px;
         margin-left: -50px;
     }
 
     .grid-image {
-        width: 92%; /* Full width images */
+        width: 95%; /* Full width images */
     }
     .image-body {
-        font-size: 10px; /* Smaller body text */
+        font-size: 12px; /* Smaller body text */
     }
     .image-list li {
         font-size: 10px; /* Smaller list items */
