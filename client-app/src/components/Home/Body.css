@@ -112,13 +112,15 @@ body, html {
     min-width: 280px; /* Prevents the card from shrinking too much */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
-    padding: 5px;
+    padding: 10px;
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #b3d9ff;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
 .card:hover {
@@ -473,7 +475,7 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 20px; /* Smallest font for small devices */
+        font-size: 26px; /* Smallest font for small devices */
         margin-top: -150px;
         margin-left: -80px;
     }
@@ -532,7 +534,7 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 30px; /* Smallest font for small devices */
+        font-size: 24px; /* Smallest font for small devices */
         margin-top: -100px;
         margin-left: -50px;
     }
@@ -576,7 +578,7 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 28px; /* Smallest font for small devices */
+        font-size: 24px; /* Smallest font for small devices */
         margin-top: -100px;
         margin-left: -50px;
     }
@@ -638,7 +640,7 @@ body, html {
     }
 
     .title-overlay h1 {
-        font-size: 26px; /* Smallest font for small devices */
+        font-size: 22px; /* Smallest font for small devices */
         margin-top: -100px;
         margin-left: -50px;
     }
