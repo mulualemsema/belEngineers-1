@@ -604,3 +604,38 @@ body, html {
         height: 40vh;
     }
 }
+
+/* Mobile screens (320px and above) */
+@media (max-width: 320px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 10px;
+    }
+
+    .title-overlay h1 {
+        font-size: 24px; /* Smallest font for small devices */
+        margin-top: -150px;
+        margin-left: -80px;
+    }
+
+    .grid-image {
+        width: 95%; /* Full width images */
+    }
+    .image-body {
+        font-size: 12px; /* Smaller body text */
+    }
+    .image-list li {
+        font-size: 10px; /* Smaller list items */
+    }
+    .image-title {
+        font-size: 14px; /* Smaller title */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .carousel {
+        height: 40vh;
+    }
+}

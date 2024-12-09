@@ -83,7 +83,72 @@ body, html {
 }
 
 /* Responsive styling */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .footer-year, .social-icons {
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 10px;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) and (min-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .footer-year, .social-icons {
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 10px;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) and (min-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .footer-year, .social-icons {
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 10px;
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info, .footer-year, .social-icons {
+        text-align: center;
+    }
+
+    .footer-logo {
+        margin-top: 10px;
+    }
+}
+
+
+/* Responsive styling */
+@media (max-width: 320px) {
     .footer-content {
         flex-direction: column;
         align-items: center;
