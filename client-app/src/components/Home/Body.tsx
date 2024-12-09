@@ -141,7 +141,6 @@ const Body = () => {
                             </button>
                     </div>
                     <h2 className="section-title">Some of the Founder's Previous Experience</h2>
-
                     <div className="image-grid">
                             {imagesMiddle.map((image) => (
                                 <div

@@ -45,7 +45,15 @@ const Header: React.FC = () => {
                              /logo.png 320w"
                              alt="Logo" className="logo-image"
                         />
-                        <h3 className="Bel-name">BEL Engineers LLC</h3>
+                        <a
+                            href="/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ textDecoration: 'none' }}
+                            onClick={() => handleLinkClick('/')
+                        }>
+                            <h3 className="Bel-name">BEL Engineers LLC</h3>
+                        </a>
                     </div>
                     <button className="menu-toggle" onClick={toggleMenu}>
                         {menuOpen ? "Close" : "Menu"}

@@ -11,7 +11,7 @@ body, html {
 }
 
 .body-container {
-    background-color: #f9f9f9;
+    background-color: white;
     border-bottom: 2px solid #ccc; /* Added grey line at the bottom */
     margin: 0; /* Remove default browser margins */
     padding: 0;
@@ -118,7 +118,7 @@ body, html {
     flex-direction: column;
     justify-content: space-between;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: lightblue;
+    background-color: #b3d9ff;
 }
 
 .card:hover {
