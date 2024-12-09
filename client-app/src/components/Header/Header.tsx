@@ -47,8 +47,6 @@ const Header: React.FC = () => {
                         />
                         <a
                             href="/"
-                            target="_blank"
-                            rel="noopener noreferrer"
                             style={{ textDecoration: 'none' }}
                             onClick={() => handleLinkClick('/')
                         }>

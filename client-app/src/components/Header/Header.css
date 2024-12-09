@@ -23,15 +23,16 @@ body {
     border-bottom: 1px solid #d3d3d3; /* Light grey bottom border */
     margin: 0;
     padding: 0;
-
 }
 
 .phone-icon {
     font-size: 16px;
+    margin-right: 10px;
 }
 
 .phone-number {
     font-weight: bold;
+    margin-right: 90px;
 }
 
 /* General styling */
@@ -137,6 +138,12 @@ body {
 .logo-container {
     display: flex;
     align-items: center; /* Vertically align the items */
+    margin-left: 20px;
+
+}
+
+.logo-container a {
+    margin-left: 20px;
 }
 
 .Bel-name {

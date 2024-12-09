@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
                     <p>&copy; {currentYear} BEL Engineers LLC All rights reserved. </p>
                 </div>
                 <div className="social-icons">
-                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/demissie-m-sema-p-e-05ab68287" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <FaLinkedin className="social-icon linkedin" />
                     </a>
                     <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">

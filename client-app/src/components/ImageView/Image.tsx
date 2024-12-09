@@ -23,7 +23,7 @@ const ImageView = () => {
     if (!image) return <p>Image not found</p>;
 
     return (
-        <div style={{ textAlign: 'center', padding: '70px', marginTop: '20px' }}>
+        <div style={{ textAlign: 'center', padding: '70px', marginTop: '120px' }}>
             <img src={image.src} alt={image.title} style={{ maxWidth: '100%', borderRadius: '8px' }} />
         </div>
     );
