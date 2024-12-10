@@ -233,67 +233,78 @@ body {
     }
 }
 
-
-/* Responsive styles for mobile */
 @media (max-width: 768px) {
+    /* Styling for the navigation links */
     .nav-links {
-        width: 170%;
-        background-color: rgba(255, 255, 255, 0.4); /* 40% opacity white */
+        width: 100%; /* Adjust width to fit the mobile screen better */
+        background-color: rgba(255, 255, 255, 0.7); /* 70% opacity white */
         position: absolute;
-        top: 20px; /* Positioning below the header */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-        display: block; /* Hide by default */
+        top: 18px; /* Slightly adjust from the top for better spacing */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        display: block; /* Hidden by default */
         justify-content: center;
         padding: 0;
+        left: 0; /* Ensure it aligns from the left side */
     }
 
     .nav-links.show {
-        display: flex; /* Show navigation links when the menu is toggled */
+        display: flex; /* Show when toggled */
+        flex-direction: column; /* Stack the items vertically */
     }
 
     .nav-links li {
-        margin-top: 20px;
+        margin-top: 15px; /* Adjust for mobile spacing */
+        padding: 10px;
     }
 
     .nav-links li:last-child {
         border-bottom: none;
     }
 
-    /* Add border-top only when menu is open */
+    /* Styling for the navigation menu when opened */
     .nav.open {
         display: block;
         position: absolute;
-        top: 60px;
-        right: 150px;
+        top: 60px; /* Adjust position below the header */
+        right: 130px; /* Adjust right-side positioning */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 20px;
-        border-radius: 5px;
-        width: 100px;
-    }
+        width: 120px; /* Set a reasonable width */
 
+    }
 
     .nav-links li {
         text-align: center;
     }
 
+    .nav.open li {
+        margin-top: 5px; /* Reduce the space between list items */
+        padding: 5px 0; /* Reduce vertical padding for each item */
+        font-size: 16px; /* Adjust font size if needed */
+        text-align: center;
+    }
+
     .nav {
-        display: none;
+        display: none; /* Default hidden state */
         padding: 0;
         margin: 0;
     }
 
+    /* For the menu toggle button */
     .menu-toggle {
         display: block;
-        font-size: 14px;
+        font-size: 18px; /* Larger button for better touch interaction */
+        color: #333;
+        cursor: pointer;
     }
 
     .header.scrolled .menu-toggle {
-        color: blue;
+        color: blue; /* Highlight color on scroll */
     }
 
-    /* Adjust top strip for smaller screens */
+    /* Styling for the top strip, ensuring it fits smaller screens */
     .top-strip {
-        justify-content: center; /* Center align content on smaller screens */
+        justify-content: center;
         font-size: 16px; /* Reduce font size */
         padding: 0;
         margin: 0;
@@ -303,15 +314,26 @@ body {
         margin-right: 0; /* Remove extra margin on smaller screens */
     }
 
+    /* Adjust text size for 'Bel-name' */
     .Bel-name {
-        font-size: 16px; /* Adjust the text size */
-        margin-top: 40px;
+        font-size: 18px; /* Slightly larger text */
+        margin-top: 20px; /* Adjust vertical spacing */
         color: blue;
     }
+
+    /* General body styling for mobile screens */
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
         padding: 0;
         margin: 0;
+    }
+
+    .nav.open li:first-child {
+        margin-top: 0; /* Remove margin from the first item */
+    }
+
+    .nav.open li:last-child {
+        margin-bottom: 0; /* Remove margin from the last item */
     }
 }
 
@@ -416,5 +438,7 @@ body {
         color: blue;
     }
 }
+
+
 
 
