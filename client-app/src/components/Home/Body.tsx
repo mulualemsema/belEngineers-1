@@ -72,7 +72,8 @@ const Body = () => {
                         body: 'IH 35 at SL 82 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
                         list1: 'Designed intersection improvements at IH 35/SH 82 to reduce traffic congestion.',
                         list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
-                        list3: ''
+                        list3: '',
+                        list4: ''
                 },
                 {
                         id: 2,
@@ -81,7 +82,8 @@ const Body = () => {
                         body: 'IH 35 at SL 80 Displaced Left Turn (Designed - 2012) Location: San Marcos, TX',
                         list1: 'Designed intersection improvements at IH 35/SH 80 to reduce traffic congestion.',
                         list2: 'Introduced a Displaced Left Turn (DLT) design to improve traffic flow and safety by relocating left-turn movements away from the main intersection.',
-                        list3: ''
+                        list3: '',
+                        list4: ''
                 },
                 {
                         id: 3,
@@ -89,18 +91,20 @@ const Body = () => {
                         title: 'BCCulvert Replacement',
                         body: 'FM 112 Roadway & Bridge-Class Culvert\n' +
                             'Replacement (Designed-2015) Location: Williamson County, TX',
-                        list1: 'Oversaw the replacement of a bridge-class culvert.',
+                        list1: 'Managed the replacement of a bridge-class culvert.',
                         list2: 'Performed hydrological and hydraulic analyses, and designed roadway geometry.',
-                        list3: 'Created phased construction schedules.'
+                        list3: 'Created phased construction schedules',
+                        list4: 'prepared PS&E'
                 },
                 {
                         id: 4,
                         src: imageSH95,
                         title: 'Bridge Replacement' ,
                         body: 'SH 95 at Willis Creek Bridge Replacement (Designed - 2015) Williamson County, TX',
-                        list1: 'Oversaw the replacement of a bridge-class culvert.',
-                        list2: 'Managed the replacement of a 200-ft outdated bridge with a new 255-ft prestressed concrete bridge.',
-                        list3: 'Conducted hydrological and hydraulic analyses, designed roadway geometry, and developed phased construction schedules.'
+                        list1: 'Managed the replacement of a 200-ft outdated bridge with a new 255-ft prestressed concrete bridge.',
+                        list2: 'Conducted hydrological and hydraulic analyses, designed roadway geometry, and developed phased construction schedules.',
+                        list3: 'prepared PS&E',
+                        list4: ''
                 },
                 {
                         id: 5,
@@ -110,7 +114,8 @@ const Body = () => {
                         body: 'RM 3238 (Hamilton) Road Widening Project ((2021) Location: Hays County, TX',
                         list1: 'Designed about 6-mile roadway widening  project, including the addition of a center turn lane and shoulders.',
                         list2: 'Conducted hydrological and hydraulic analyses, designing 24 cross-drainage structures to enhance stormwater management.',
-                        list3: 'Developed a comprehensive traffic control plan to minimize disruptions during construction '
+                        list3: 'Developed a comprehensive traffic control plan to minimize disruptions during construction',
+                        list4: 'prepared PS&E'
                 }
         ];
 
@@ -152,11 +157,12 @@ const Body = () => {
 
                                         <div className="image-overlay">
                                                 <p className="image-body">{image.body}</p>
-                                                <ul className="image-list">
-                                                        <li>{image.list1}</li>
-                                                        <li>{image.list2}</li>
-                                                        <li>{image.list3}</li>
-                                                </ul>
+                                            <ul className="image-list">
+                                                <li>{image.list1}</li>
+                                                <li>{image.list2}</li>
+                                                <li>{image.list3}</li>
+                                                <li>{image.list4}</li>
+                                            </ul>
                                         </div>
 
                                         <div className="image-title">{image.title}</div>
