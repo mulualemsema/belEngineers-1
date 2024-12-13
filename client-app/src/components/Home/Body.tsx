@@ -114,8 +114,8 @@ const Body = () => {
                         body: 'RM 3238 (Hamilton) Road Widening Project ((2021) Location: Hays County, TX',
                         list1: 'Designed about 6-mile roadway widening  project, including the addition of a center turn lane and shoulders.',
                         list2: 'Conducted hydrological and hydraulic analyses, designing 24 cross-drainage structures to enhance stormwater management.',
-                        list3: 'Developed a comprehensive traffic control plan to minimize disruptions during construction',
-                        list4: 'prepared PS&E'
+                        list3: 'Developed a comprehensive traffic control plan to minimize disruptions during construction and prepared PS&E',
+                        list4: ''
                 }
         ];
 
