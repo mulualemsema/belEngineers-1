@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: data-seeder-Demissie
-      author: belengineerAdmin3
+      author: demissieSema
       changes:
         - sqlFile:
             dbms: 'postgresql'

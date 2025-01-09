@@ -25,7 +25,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
 
         try {
             const response = await axios.post(
-                "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/users/login",
+                "https://belengineers-g0b2hbgzarhjbrdb.canadacentral-01.azurewebsites.net/api/users/login",
                 { username, password }
             );
 
@@ -61,7 +61,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
 
         try {
             await axios.post(
-                "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/users/reset-password",
+                "https://belengineers-g0b2hbgzarhjbrdb.canadacentral-01.azurewebsites.net/api/users/reset-password",
                 { newPassword },
                 { headers: { Authorization: `Bearer ${localToken}` } }
             );

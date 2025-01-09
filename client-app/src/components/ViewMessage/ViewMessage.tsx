@@ -22,7 +22,7 @@ const ViewMessage = () => {
         // Fetch data from the API
         const fetchMessages = async () => {
             try {
-                const response = await axios.get<UserMessage[]>("https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/messages/reading");
+                const response = await axios.get<UserMessage[]>("https://belengineers-g0b2hbgzarhjbrdb.canadacentral-01.azurewebsites.net/api/messages/reading");
                 setMessages(response.data);
                 setError(""); // Clear error if successful
             } catch (err) {

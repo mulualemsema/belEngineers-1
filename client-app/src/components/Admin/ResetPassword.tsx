@@ -27,7 +27,7 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({ token }) => {
 
         try {
             await axios.post(
-                "https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/auth/reset-password",
+                "https://belengineers-g0b2hbgzarhjbrdb.canadacentral-01.azurewebsites.net/auth/reset-password",
                 { oldPassword, newPassword },
                 {
                     headers: {

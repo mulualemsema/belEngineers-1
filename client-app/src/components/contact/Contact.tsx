@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
         }
 
         try {
-            const response = await fetch('https://belengineerstexas-akbsf4f7gsfteggz.canadacentral-01.azurewebsites.net/api/messages/posting', {
+            const response = await fetch('https://belengineers-g0b2hbgzarhjbrdb.canadacentral-01.azurewebsites.net/api/messages/posting', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
