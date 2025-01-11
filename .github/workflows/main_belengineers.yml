@@ -25,10 +25,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      # Build the project using Gradle
+      # Build the project using Gradle (ensure Gradle wrapper exists in the repo)
       - name: Build with Gradle
         run: |
-          gradlew clean build
+          ./gradlew clean build
+        shell: bash
 
       # Upload the JAR artifact for deployment
       - name: Upload artifact for deployment
