@@ -61,4 +61,4 @@ jobs:
           app-name: 'belengineerstexas'
           slot-name: 'Production'
           package: 'belengineers-tx-0.0.1-SNAPSHOT.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_74445E65046E4205A09EB6530E99C5EF }}
+          publish-profile: ${{ AZURE_PUBLISH_PROFILE_BELENGINEERS}}
