@@ -1,4 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# Documentation for Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy JAR app to Azure Web App - belengineers
@@ -14,21 +14,27 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v4
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - name: Set up Java version
-        uses: actions/setup-java@v1
+      # Set up Java version
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
         with:
           java-version: '17'
+          distribution: 'temurin'
 
+      # Build the project using Maven
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Upload artifact for deployment job
+      # Upload the JAR artifact for deployment
+      - name: Upload artifact for deployment
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: '${{ github.workspace }}/target/*.jar'
+          path: target/*.jar
 
   deploy:
     runs-on: windows-latest
@@ -38,16 +44,18 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+      # Download the JAR artifact from the build job
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
           name: java-app
 
+      # Deploy the artifact to Azure Web App
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'belengineers'
           slot-name: 'Production'
-          publish-profile: ${{ AZURE_PUBLISH_PROFILE_BELENGINEERS}}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE_BELENGINEERS }}
           package: '*.jar'
